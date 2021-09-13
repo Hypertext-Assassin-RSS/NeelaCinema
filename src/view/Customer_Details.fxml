@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="674.0" prefWidth="967.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Customer_DetailsController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cc00ff;" styleClass="backgraund" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="740.0" AnchorPane.topAnchor="37.0">
+               <image>
+                  <Image url="@../img/employee.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="464.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="508.0" AnchorPane.leftAnchor="464.0" AnchorPane.rightAnchor="437.0" AnchorPane.topAnchor="100.0">
+               <image>
+                  <Image url="@../img/search.png" />
+               </image>
+            </ImageView>
+            <JFXTextField labelFloat="true" layoutX="497.0" layoutY="96.0" prefHeight="33.0" prefWidth="227.0" promptText="Search">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </JFXTextField>
+            <VBox alignment="CENTER" layoutX="163.0" layoutY="194.0" prefHeight="80.0" prefWidth="428.0">
+               <children>
+                  <HBox prefHeight="38.0" prefWidth="428.0" styleClass="textFild" stylesheets="@../style/style.css">
+                     <children>
+                        <ComboBox prefHeight="41.0" prefWidth="380.0" promptText="Nic No" style="-fx-background-color: traansperent; -fx-border-color: transperent;" styleClass="textFild" stylesheets="@../style/style.css" />
+                        <ImageView fitHeight="33.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/png/007-id%20card.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="10.0" top="2.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="41.0" prefWidth="421.0" stylesheets="@../style/style.css" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

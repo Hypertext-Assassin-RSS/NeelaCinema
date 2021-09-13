@@ -1,0 +1,28 @@
+.pane{
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 20 20 18 18;
+    -fx-border-radius: 0 0 18 18;
+    -fx-background-color: #FC3D44;
+  }
+  .menubar{
+   -fx-background-radius: 10 10 0 0;
+   -fx-border-radius: 10 10 0 0;   
+  }
+  .backgraund{
+   -fx-background-size: 200 200;
+   -fx-background-radius: 50 50 50 50;
+   -fx-border-radius: 50 50 50 50;
+  }  
+  .combobox{
+   -fx-background-radius: 10 10 10 10;
+   -fx-border-radius: 10 10 10 10;  
+  }
+  .textFild{
+   -fx-background-color: transperent;
+   -fx-border-width: 0 0 1 0;
+   -fx-border-color: black;
+  }
+  .box{
+      -fx-background-radius: 50 50 0 0;
+      -fx-border-radius: 50 50 0 0;
+  }

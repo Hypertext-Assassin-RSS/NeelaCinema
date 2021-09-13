@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Schedule_Controller">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8236CB; -fx-background-radius: 50;" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutY="-2.0" prefHeight="97.0" prefWidth="927.0" style="-fx-background-color: #C0392B;" styleClass="box" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="539.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="288.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" size="20">
+                           <HBox.margin>
+                              <Insets left="20.0" top="8.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <ComboBox prefHeight="34.0" prefWidth="240.0" promptText="Month" style="-fx-background-radius: 50; -fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 50;" stylesheets="@../style/style.css">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="272.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="25">
+                           <HBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <JFXTextField labelFloat="true" prefHeight="34.0" prefWidth="308.0" promptText="Search" unFocusColor="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="95.0" prefWidth="341.0">
+                     <children>
+                        <VBox prefHeight="95.0" prefWidth="345.0">
+                           <children>
+                              <Label fx:id="lblDate" prefHeight="28.0" prefWidth="316.0" text="Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="13.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblTime" prefHeight="28.0" prefWidth="316.0" text="Time" textFill="WHITE">
+                                 <font>
+                                    <Font name="Times New Roman" size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="13.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="132.0" prefHeight="100.0" prefWidth="0.0" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="402.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="132.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="2" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="3" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="4" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="5" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="6" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="7" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="217.0" prefHeight="100.0" prefWidth="842.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="8" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="9" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="10" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="11" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="12" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="13" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="14" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="309.0" prefHeight="100.0" prefWidth="842.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="15" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="16" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="17" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="18" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="19" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="20" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="21" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="409.0" prefHeight="100.0" prefWidth="842.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="22" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="23" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="24" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="25" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="26" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="27" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="28" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutY="509.0" prefHeight="100.0" prefWidth="842.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <JFXButton prefHeight="100.0" prefWidth="136.0" text="29" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="123.0" text="30" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton prefHeight="100.0" prefWidth="150.0" text="31" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="45.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

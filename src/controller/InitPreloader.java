@@ -12,6 +12,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.paint.Color;
 
 public class InitPreloader implements Initializable {
     public Label lblLoading;
@@ -62,7 +63,8 @@ public class InitPreloader implements Initializable {
                     Parent root = FXMLLoader.load(getClass().getResource("../view/Home_window.fxml"));
                     Scene scene =new Scene(root);
                     stage.setScene(scene);
-                    stage.initStyle(StageStyle.UNDECORATED);
+                    scene.setFill(Color.TRANSPARENT);
+                    stage.initStyle(StageStyle.TRANSPARENT);
                     stage.show();
                 } catch (IOException | InterruptedException e) {
                     e.printStackTrace();

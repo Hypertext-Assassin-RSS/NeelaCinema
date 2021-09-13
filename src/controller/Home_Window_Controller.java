@@ -26,6 +26,9 @@ public class Home_Window_Controller {
     public AnchorPane context;
     @FXML
     private static JFXButton btnSchedule;
+    public AnchorPane ApaneOne;
+    public AnchorPane STpaneOne;
+    public JFXButton btnReservation;
 
     @FXML
     private ResourceBundle resources;
@@ -53,16 +56,43 @@ public class Home_Window_Controller {
 
 
     public void openSchedule(MouseEvent mouseEvent) throws IOException {
-        loadUi("sample");
+        loadUi("calander");
 
+    }
+    @FXML
+    void open_Customer_Details(MouseEvent event) throws IOException {
+        loadUi("Customer_Details");
     }
 
 
     void loadUi(String fileName) throws IOException {
-        URL resource = getClass().getResource("../view/" + fileName + ".fxml");
+        Parent load = FXMLLoader.load(getClass().getResource("../view/" + fileName + ".fxml"));
+        Scene scene = btnReservation.getScene();
+        load.translateXProperty().set(scene.getWidth());
+
+        ApaneOne.getChildren().add(load);
+
+        Timeline timeline = new Timeline();
+        KeyValue keyValue = new KeyValue(load.translateXProperty(),0,Interpolator.EASE_IN);
+        KeyFrame keyFrame = new KeyFrame(Duration.seconds(1),keyValue);
+        timeline.getKeyFrames().add(keyFrame);
+        timeline.setOnFinished(event -> {
+            ApaneOne.getChildren().remove(STpaneOne);
+        });
+        timeline.play();
+
+
+
+        /*URL resource = getClass().getResource("../view/" + fileName + ".fxml");
         Parent load = FXMLLoader.load(resource);
-        context.getChildren().clear();
-        context.getChildren().add(load);
+        ApaneOne.getChildren().clear();
+        ApaneOne.getChildren().add(load);*/
     }
+
+    public void openReservation(MouseEvent mouseEvent) throws IOException {
+        loadUi("reservation");
+    }
+
+
 }
 
