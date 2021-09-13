@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="275.0" prefWidth="780.0" style="-fx-background-color: #6F1E51;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InitPreloader">
+   <children>
+      <ImageView fitHeight="291.0" fitWidth="794.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/GDSE.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblLoading" layoutX="14.0" layoutY="250.0" prefHeight="18.0" prefWidth="138.0" text="Loading...">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font></Label>
+      <JFXProgressBar layoutX="260.0" layoutY="255.0" prefHeight="8.0" prefWidth="274.0" />
+   </children>
+</AnchorPane>
