@@ -29,7 +29,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Creating FXML...";
             Platform.runLater(() -> lblloadingg.setText(message[0]));
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -38,7 +38,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Reading Controllers...";
             Platform.runLater(() -> lblloadingg.setText(message[0]));
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -48,7 +48,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Loading Main Class...";
             Platform.runLater(() -> lblloadingg.setText(message[0]));
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -58,7 +58,7 @@ public class InitPreloader implements Initializable {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(1000);
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("../view/Home_window.fxml"));
                     Scene scene =new Scene(root);

@@ -45,7 +45,11 @@ public class Home_Window_Controller {
     @FXML
     void max(MouseEvent event) {
         Stage e = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        e.setFullScreen(true);
+        if (e.isMaximized()){
+            e.setMaximized(false);
+        }else{
+            e.setMaximized(true);
+        }
     }
 
     @FXML
