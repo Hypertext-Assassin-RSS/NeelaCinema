@@ -18,11 +18,22 @@
    -fx-border-radius: 10 10 10 10;  
   }
   .textFild{
-   -fx-background-color: transperent;
+   -fx-background-color:   transperent;
    -fx-border-width: 0 0 1 0;
-   -fx-border-color: black;
+   -fx-border-color: white;
   }
   .box{
       -fx-background-radius: 50 50 0 0;
       -fx-border-radius: 50 50 0 0;
+  }
+  .font{
+      -fx-font-color:black;
+  }
+  .RightBottemBar{
+      -fx-background-radius: 0 0 50 0;
+      -fx-border-radius: 0 0 50 0;
+  }
+  .LeftBottemBar{
+      -fx-background-radius: 0 0 0 50;
+      -fx-border-radius: 0 0 0 50;
   }

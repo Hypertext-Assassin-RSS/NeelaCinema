@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.Film_Controller"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="674.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Film_Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: darkblue;" styleClass="backgraund" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="927.0" style="-fx-background-color: black;" styleClass="box" stylesheets="@../style/style.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="126.0" fitWidth="222.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/logo-design-for-movie-production-company-01-.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="196.0" prefWidth="927.0" spacing="50.0">
+                                 <children>
+                                    <ImageView fitHeight="237.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/movie_thumb/htt4_onesheet_1400x2100_exclusivev2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="237.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/movie_thumb/best-kids-movies-2018-1536243829.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="237.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/movie_thumb/homepage.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="196.0" prefWidth="927.0" spacing="50.0">
+                                 <children>
+                                    <ImageView fitHeight="237.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/movie_thumb/MV5BOTVhMzYxNjgtYzYwOC00MGIwLWJmZGEtMjgwMzgxMWUwNmRhXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="237.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/movie_thumb/Black_Widow_3x4_6_1628074323937_8.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="237.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/movie_thumb/download.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="7.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

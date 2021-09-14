@@ -29,6 +29,9 @@ public class Home_Window_Controller {
     public AnchorPane ApaneOne;
     public AnchorPane STpaneOne;
     public JFXButton btnReservation;
+    @FXML
+    public AnchorPane newPane;
+
 
     @FXML
     private ResourceBundle resources;
@@ -67,6 +70,32 @@ public class Home_Window_Controller {
     void open_Customer_Details(MouseEvent event) throws IOException {
         loadUi("Customer_Details");
     }
+     
+    @FXML
+    void open_Film(MouseEvent event) throws IOException {
+        loadUi("Film");
+    }
+
+    @FXML
+    void open_Login(MouseEvent event) throws IOException {
+        loadUi("Login");
+    }
+
+    @FXML
+    void open_Package(MouseEvent event) throws IOException {
+        loadUi("Package");
+    }
+      @FXML
+    void Open_Reservation_Details(MouseEvent event) throws IOException {
+        loadUi("reservation");
+    }
+
+    @FXML
+    void Open_Ticket(MouseEvent event) throws IOException {
+        loadUi("Tickets");
+    }
+
+
 
 
     void loadUi(String fileName) throws IOException {
@@ -84,17 +113,32 @@ public class Home_Window_Controller {
             ApaneOne.getChildren().remove(STpaneOne);
         });
         timeline.play();
-
-
-
-        /*URL resource = getClass().getResource("../view/" + fileName + ".fxml");
-        Parent load = FXMLLoader.load(resource);
-        ApaneOne.getChildren().clear();
-        ApaneOne.getChildren().add(load);*/
     }
 
     public void openReservation(MouseEvent mouseEvent) throws IOException {
-        loadUi("reservation");
+        loadUi("Reservation_Details");
+    }
+     @FXML
+    void open_Parking(MouseEvent event) throws IOException {
+        //loadUi("parking");
+        URL resource = getClass().getResource("../view/parking.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        
+    }
+
+    @FXML
+    void open_settings(MouseEvent event) throws IOException {
+       // loadUi("settings");
+        URL resource = getClass().getResource("../view/setting.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
 
 
