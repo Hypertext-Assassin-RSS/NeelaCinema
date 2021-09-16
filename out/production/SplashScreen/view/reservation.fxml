@@ -4,6 +4,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -13,11 +15,11 @@
 
 <AnchorPane prefHeight="674.0" prefWidth="967.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reservation_Controller">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: orange;" styleClass="backgraund" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" styleClass="backgraund" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                <top>
-                  <VBox prefHeight="164.0" prefWidth="927.0" BorderPane.alignment="CENTER">
+                  <VBox prefHeight="37.0" prefWidth="887.0" BorderPane.alignment="CENTER">
                      <children>
                         <HBox alignment="CENTER" prefHeight="56.0" prefWidth="327.0" styleClass="pane">
                            <children>
@@ -36,7 +38,7 @@
                   </VBox>
                </top>
                <bottom>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER_RIGHT">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="887.0" spacing="20.0" BorderPane.alignment="CENTER_RIGHT">
                      <children>
                         <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="150.0" text="Button" />
                         <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="150.0">
@@ -48,58 +50,68 @@
                   </HBox>
                </bottom>
                <center>
-                  <Accordion BorderPane.alignment="CENTER">
-                    <panes>
-                      <TitledPane animated="false" prefHeight="320.0" prefWidth="831.0" text="Customer">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox prefHeight="200.0" prefWidth="738.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Accordion prefHeight="256.0" prefWidth="887.0">
+                          <panes>
+                            <TitledPane animated="false" prefHeight="320.0" prefWidth="831.0" text="Customer">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <HBox prefHeight="45.0" prefWidth="906.0" />
-                                          <HBox prefHeight="45.0" prefWidth="906.0" />
-                                          <HBox prefHeight="45.0" prefWidth="906.0" />
-                                          <HBox prefHeight="45.0" prefWidth="906.0" />
+                                          <VBox prefHeight="200.0" prefWidth="738.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="45.0" prefWidth="906.0" />
+                                                <HBox prefHeight="45.0" prefWidth="906.0" />
+                                                <HBox prefHeight="45.0" prefWidth="906.0" />
+                                                <HBox prefHeight="45.0" prefWidth="906.0" />
+                                             </children>
+                                          </VBox>
                                        </children>
-                                    </VBox>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" text="Reservation">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Reservation">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <HBox prefHeight="40.0" prefWidth="906.0" />
-                                          <HBox prefHeight="40.0" prefWidth="906.0" />
-                                          <HBox prefHeight="40.0" prefWidth="906.0" />
-                                          <HBox prefHeight="40.0" prefWidth="906.0" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="40.0" prefWidth="906.0" />
+                                                <HBox prefHeight="40.0" prefWidth="906.0" />
+                                                <HBox prefHeight="40.0" prefWidth="906.0" />
+                                                <HBox prefHeight="40.0" prefWidth="906.0" />
+                                             </children>
+                                          </VBox>
                                        </children>
-                                    </VBox>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                      <TitledPane animated="false" text="Total">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Total">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <HBox prefHeight="44.0" prefWidth="906.0" />
-                                          <HBox prefHeight="44.0" prefWidth="906.0" />
-                                          <HBox prefHeight="44.0" prefWidth="906.0" />
-                                          <HBox prefHeight="44.0" prefWidth="906.0" />
+                                          <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="44.0" prefWidth="906.0" />
+                                                <HBox prefHeight="44.0" prefWidth="906.0" />
+                                                <HBox prefHeight="44.0" prefWidth="906.0" />
+                                                <HBox prefHeight="44.0" prefWidth="906.0" />
+                                             </children>
+                                          </VBox>
                                        </children>
-                                    </VBox>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </TitledPane>
-                    </panes>
-                  </Accordion>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <TableView layoutY="266.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="266.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
                </center>
             </BorderPane>
          </children>
