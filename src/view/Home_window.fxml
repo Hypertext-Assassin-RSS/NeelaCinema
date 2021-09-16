@@ -12,83 +12,98 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="STpaneOne" maxHeight="1050.0" maxWidth="1680.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: gold;" styleClass="pane" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home_Window_Controller">
+<AnchorPane fx:id="STpaneOne" prefHeight="720.0" prefWidth="1300.0" style="-fx-background-color: red;" styleClass="backgraund" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Home_Window_Controller">
    <children>
       <BorderPane maxHeight="1050.0" maxWidth="1680.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <AnchorPane prefHeight="619.0" prefWidth="301.0" style="-fx-background-color: silver; -fx-background-radius: 20;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="619.0" prefWidth="301.0" style="-fx-background-color: black; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="TOP_CENTER" maxHeight="640.0" prefHeight="640.0" prefWidth="301.0" spacing="20.0" style="-fx-background-radius: 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox alignment="TOP_CENTER" maxHeight="640.0" prefHeight="640.0" prefWidth="301.0" spacing="25.0" style="-fx-background-radius: 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <JFXButton fx:id="btnSchedule" alignment="CENTER" buttonType="RAISED" onMouseClicked="#openSchedule" prefHeight="50.0" prefWidth="269.0" ripplerFill="BLACK" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="schedule" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <graphic>
-                              <MaterialDesignIconView fill="WHITE" glyphName="CLOCK" size="25" text="" />
-                           </graphic>
+                        <JFXButton buttonType="RAISED" prefHeight="62.0" prefWidth="144.0" text="Home" textFill="#5c6368">
                            <VBox.margin>
-                              <Insets top="10.0" />
-                           </VBox.margin>
-                        </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#open_Customer_Details" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="CustomerDetails" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
+                              <Insets bottom="-20.0" top="10.0" />
                            </VBox.margin>
                            <graphic>
-                              <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="25" />
+                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/home.png" />
+                                 </image>
+                              </ImageView>
                            </graphic>
-                        </JFXButton>
-                        <JFXButton fx:id="btnReservation" alignment="CENTER" buttonType="RAISED" onMouseClicked="#openReservation" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="Reservation" textAlignment="CENTER" textFill="WHITE">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="System Bold" size="20.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <graphic>
-                              <MaterialDesignIconView fill="WHITE" glyphName="BOOKMARK_CHECK" size="25" />
-                           </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#open_Film" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="Film" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#openSchedule" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="schedule" textAlignment="CENTER" textFill="#5c6368">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="#5c6368" glyphName="CLOCK" size="25" text="" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#open_Customer_Details" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="CustomerDetails" textAlignment="CENTER" textFill="#5c6368">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                            <graphic>
-                              <MaterialDesignIconView fill="WHITE" glyphName="FILMSTRIP" size="25" />
+                              <MaterialDesignIconView fill="#5c6368" glyphName="ACCOUNT" size="25" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#open_Package" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="Package" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton fx:id="btnReservation" alignment="CENTER" buttonType="RAISED" onMouseClicked="#openReservation" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="Reservation" textAlignment="CENTER" textFill="#5c6368">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="System Bold" size="21.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                            <graphic>
-                              <MaterialDesignIconView fill="WHITE" glyphName="PACKAGE_VARIANT" size="25" />
+                              <MaterialDesignIconView fill="#5c6368" glyphName="BOOKMARK_CHECK" size="25" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#Open_Ticket" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="Ticket" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#open_Film" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="Film" textAlignment="CENTER" textFill="#5c6368">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="System Bold" size="21.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
                            <graphic>
-                              <FontAwesomeIconView fill="WHITE" glyphName="TICKET" size="25" />
+                              <MaterialDesignIconView fill="#5c6368" glyphName="FILMSTRIP" size="25" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#Open_Reservation_Details" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: gold; -fx-background-radius: 20; -fx-border-color: transperent; -fx-border-radius: 20;" text="ReservationDetails" textAlignment="CENTER" textFill="WHITE">
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#open_Package" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="Package" textAlignment="CENTER" textFill="#5c6368">
                            <font>
-                              <Font size="18.0" />
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <MaterialDesignIconView fill="#5c6368" glyphName="PACKAGE_VARIANT" size="25" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#Open_Ticket" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="Ticket" textAlignment="CENTER" textFill="#5c6368">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="#5c6368" glyphName="TICKET" size="25" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#Open_Reservation_Details" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="ReservationDetails" textAlignment="CENTER" textFill="#5c6368">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
                            </font>
                            <VBox.margin>
                               <Insets />
@@ -97,11 +112,6 @@
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
                            </graphic>
                         </JFXButton>
-                        <ImageView fitHeight="154.0" fitWidth="147.0" onMouseClicked="#open_Login" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/png/050-access.png" />
-                           </image>
-                        </ImageView>
                      </children>
                   </VBox>
                </children>
@@ -111,11 +121,11 @@
             </AnchorPane>
          </left>
          <top>
-            <HBox alignment="CENTER_RIGHT" maxWidth="1680.0" prefHeight="46.0" prefWidth="1280.0" style="-fx-background-color: Silver;" styleClass="menubar" stylesheets="@../style/style.css" BorderPane.alignment="CENTER_RIGHT">
+            <HBox alignment="CENTER_RIGHT" prefHeight="46.0" style="-fx-background-color: black;" styleClass="menubar" stylesheets="@../style/style.css" BorderPane.alignment="CENTER_RIGHT">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="100.0" spacing="10.0">
                      <children>
-                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="File" textFill="WHITE">
+                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="File" textFill="#5c6368">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -123,7 +133,7 @@
                               <Font name="Times New Roman" size="15.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Edit" textFill="WHITE">
+                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Edit" textFill="#5c6368">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -131,7 +141,7 @@
                               <Font name="Times New Roman" size="15.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="view" textFill="WHITE">
+                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="view" textFill="#5c6368">
                            <font>
                               <Font name="Times New Roman" size="15.0" />
                            </font>
@@ -139,7 +149,7 @@
                               <Insets />
                            </HBox.margin>
                         </JFXButton>
-                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Help" textFill="WHITE">
+                        <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Help" textFill="#5c6368">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -155,24 +165,24 @@
                            <image>
                               <Image url="@../img/parking-area.png" />
                            </image></ImageView>
-                        <ImageView fitHeight="37.0" fitWidth="56.0" onMouseClicked="#open_settings" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="37.0" fitWidth="56.0" onMouseClicked="#open_Login" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../img/settings%20(1).png" />
                            </image></ImageView>
                      </children></HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
                      <children>
-                        <MaterialDesignIconView fill="WHITE" glyphName="WINDOW_MINIMIZE" onMouseClicked="#mini" size="25">
+                        <MaterialDesignIconView fill="#5c6368" glyphName="WINDOW_MINIMIZE" onMouseClicked="#mini" size="25">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
                         </MaterialDesignIconView>
-                        <MaterialDesignIconView fill="WHITE" glyphName="VECTOR_ARRANGE_BELOW" onMouseClicked="#max" size="25">
+                        <MaterialDesignIconView fill="#5c6368" glyphName="VECTOR_ARRANGE_BELOW" onMouseClicked="#max" size="25">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
                         </MaterialDesignIconView>
-                        <MaterialDesignIconView fill="WHITE" glyphName="CLOSE_CIRCLE_OUTLINE" onMouseClicked="#close" size="25">
+                        <MaterialDesignIconView fill="#5c6368" glyphName="CLOSE_CIRCLE_OUTLINE" onMouseClicked="#close" size="25">
                            <HBox.margin>
                               <Insets right="-25.0" />
                            </HBox.margin>
@@ -186,9 +196,11 @@
             </HBox>
          </top>
          <center>
-            <AnchorPane fx:id="ApaneOne" minHeight="-Infinity" prefHeight="674.0" prefWidth="967.0" />
+            <AnchorPane fx:id="ApaneOne" minHeight="-Infinity" prefHeight="674.0" prefWidth="967.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin></AnchorPane>
          </center>
       </BorderPane>
-      <AnchorPane fx:id="newPane" layoutY="44.0" prefHeight="676.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0" />
    </children>
 </AnchorPane>

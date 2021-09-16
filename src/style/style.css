@@ -1,39 +1,45 @@
-.pane{
-    -fx-background-size: 1200 900;
-    -fx-background-radius: 20 20 18 18;
-    -fx-border-radius: 0 0 18 18;
-    -fx-background-color: #FC3D44;
-  }
-  .menubar{
+.menubar{
    -fx-background-radius: 10 10 0 0;
    -fx-border-radius: 10 10 0 0;   
   }
   .backgraund{
-   -fx-background-size: 200 200;
-   -fx-background-radius: 50 50 50 50;
-   -fx-border-radius: 50 50 50 50;
+   -fx-background-radius: 10 10 10 10;
+   -fx-border-radius: 10 10 10 10;
   }  
   .combobox{
    -fx-background-radius: 10 10 10 10;
    -fx-border-radius: 10 10 10 10;  
   }
   .textFild{
-   -fx-background-color:   transperent;
+   -fx-background-color: transperent;
    -fx-border-width: 0 0 1 0;
-   -fx-border-color: white;
+   -fx-border-color: black;
   }
   .box{
+      -fx-background-radius: 10 10 0 0;
+      -fx-border-radius: 10 10 0 0;
+  }
+  
+  .RightBottemBar{
+      -fx-background-radius: 0 0 10 0;
+      -fx-border-radius: 0 0 10 0;
+  }
+  .LeftBottemBar{
+      -fx-background-radius: 0 0 0 10;
+      -fx-border-radius: 0 0 0 10;
+  }
+  .calanderNumber{
+      -fx-background-radius: 70 70 70 70;
+      -fx-border-radius: 70 70 70 70;
+  }
+  .top{
       -fx-background-radius: 50 50 0 0;
       -fx-border-radius: 50 50 0 0;
   }
+  .bottem{
+      -fx-background-radius: 0 0 10 10;
+      -fx-border-radius: 0 0 10 10;
+  }
   .font{
       -fx-font-color:black;
-  }
-  .RightBottemBar{
-      -fx-background-radius: 0 0 50 0;
-      -fx-border-radius: 0 0 50 0;
-  }
-  .LeftBottemBar{
-      -fx-background-radius: 0 0 0 50;
-      -fx-border-radius: 0 0 0 50;
   }

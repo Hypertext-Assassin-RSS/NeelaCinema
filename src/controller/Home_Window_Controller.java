@@ -78,7 +78,13 @@ public class Home_Window_Controller {
 
     @FXML
     void open_Login(MouseEvent event) throws IOException {
-        loadUi("Login");
+        //loadUi("Login");
+        URL resource = getClass().getResource("../view/Login.fxml");
+        Parent load = FXMLLoader.load(resource);
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -133,12 +139,7 @@ public class Home_Window_Controller {
     @FXML
     void open_settings(MouseEvent event) throws IOException {
        // loadUi("settings");
-        URL resource = getClass().getResource("../view/setting.fxml");
-        Parent load = FXMLLoader.load(resource);
-        Scene scene = new Scene(load);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+        
     }
 
 

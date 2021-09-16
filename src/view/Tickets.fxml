@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="674.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Tickets_Controller">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: silver;" styleClass="backgraund" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #5C6368;" styleClass="backgraund" stylesheets="@../style/style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <top>
@@ -18,7 +18,7 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="39.0" prefWidth="198.0" text="Ticket Price">
                            <font>
-                              <Font name="Cambria Math" size="30.0" />
+                              <Font name="Times New Roman Bold" size="30.0" />
                            </font>
                         </Label>
                      </children>
@@ -27,11 +27,25 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView layoutX="182.0" prefHeight="534.0" prefWidth="745.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+                        <TableView layoutX="182.0" prefHeight="534.0" prefWidth="745.0" style="-fx-background-color: #FF0000;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn prefWidth="238.0" />
-                            <TableColumn prefWidth="246.0" text="Full" />
-                              <TableColumn prefWidth="242.0" text="Half" />
+                            <TableColumn prefWidth="238.0" style="-fx-background-color: black;" />
+                            <TableColumn prefWidth="246.0" style="-fx-background-color: black;">
+                                 <graphic>
+                                    <Label text="Full" textFill="#5c6368">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic></TableColumn>
+                              <TableColumn prefWidth="242.0" style="-fx-background-color: black;">
+                                 <graphic>
+                                    <Label text="Half" textFill="#5c6368">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic></TableColumn>
                           </columns>
                         </TableView>
                      </children>

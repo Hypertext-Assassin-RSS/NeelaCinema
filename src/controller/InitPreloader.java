@@ -58,7 +58,7 @@ public class InitPreloader implements Initializable {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(0);
                     Stage stage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("../view/Home_window.fxml"));
                     Scene scene =new Scene(root);

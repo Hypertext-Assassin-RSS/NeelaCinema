@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controller.Login_Controller">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login_Controller">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -60,7 +59,7 @@
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0">
                                  <children>
-                                    <JFXButton buttonType="RAISED" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white;" styleClass="combobox" stylesheets="@../style/style.css" text="LOGIN" />
+                                    <JFXButton buttonType="RAISED" onMouseClicked="#open_Settings" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white;" styleClass="combobox" stylesheets="@../style/style.css" text="LOGIN" />
                                  </children>
                               </HBox>
                            </children>

@@ -20,7 +20,7 @@
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <left>
-                  <AnchorPane prefHeight="534.0" prefWidth="420.0" style="-fx-background-color: blue;" styleClass="LeftBottemBar" BorderPane.alignment="CENTER">
+                  <AnchorPane prefHeight="534.0" prefWidth="420.0" style="-fx-background-color: #242729;" styleClass="LeftBottemBar" BorderPane.alignment="CENTER">
                      <children>
                         <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
@@ -37,86 +37,92 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="420.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="90.0" text="Nic No" textFill="WHITE">
+                                    <Label prefWidth="90.0" text="Nic No" textFill="#5c6368">
                                        <font>
-                                          <Font name="Times New Roman" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="15.0" />
                                        </font>
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="300.0" />
+                                    <TextField prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="420.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="90.0" text="Name" textFill="WHITE">
+                                    <Label prefWidth="90.0" text="Name" textFill="#5c6368">
                                        <font>
-                                          <Font name="Times New Roman" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="15.0" />
                                        </font>
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField prefWidth="300.0" />
+                                    <TextField prefWidth="300.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="420.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="90.0" text="Contact" textFill="WHITE">
+                                    <Label prefWidth="90.0" text="Contact" textFill="#5c6368">
                                        <font>
-                                          <Font name="Times New Roman" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="15.0" />
                                        </font>
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField prefWidth="300.0" />
+                                    <TextField prefWidth="300.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="420.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="90.0" text="Address *" textFill="WHITE">
+                                    <Label prefWidth="90.0" text="Address *" textFill="#5c6368">
                                        <font>
-                                          <Font name="Times New Roman" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="15.0" />
                                        </font>
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField prefWidth="300.0" />
+                                    <TextField prefWidth="300.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="420.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="90.0" text="Email *" textFill="WHITE">
+                                    <Label prefWidth="90.0" text="Email *" textFill="#5c6368">
                                        <font>
-                                          <Font name="Times New Roman" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="15.0" />
                                        </font>
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField prefWidth="300.0" />
+                                    <TextField prefWidth="300.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="420.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="90.0" text="Salary *" textFill="WHITE">
+                                    <Label prefWidth="90.0" text="Salary *" textFill="#5c6368">
                                        <font>
-                                          <Font name="Times New Roman" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="15.0" />
                                        </font>
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>
                                     </Label>
-                                    <TextField prefWidth="300.0" />
+                                    <TextField prefWidth="300.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                                  <children>
-                                    <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: white;" text="Clear" textFill="BLUE" />
-                                    <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: white;" text="Save" textFill="BLUE" />
+                                    <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #5C6368;" text="Clear" textFill="#242729">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="15.0" />
+                                       </font></JFXButton>
+                                    <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #5C6368;" text="Save" textFill="#242729">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="15.0" />
+                                       </font></JFXButton>
                                  </children>
                               </HBox>
                            </children>
@@ -125,9 +131,9 @@
                   </AnchorPane>
                </left>
                <top>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="731.0" style="-fx-background-color: white;" styleClass="box" BorderPane.alignment="CENTER">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="731.0" style="-fx-background-color: #5C6368;" styleClass="box" BorderPane.alignment="CENTER">
                      <children>
-                        <Label text="Customer" textFill="BLUE">
+                        <Label text="Customer" textFill="#242729">
                            <font>
                               <Font name="Cambria Bold" size="50.0" />
                            </font>
@@ -138,11 +144,20 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView layoutX="-5.0" prefHeight="534.0" prefWidth="517.0" styleClass="RightBottemBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView layoutX="-5.0" prefHeight="534.0" prefWidth="517.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn prefWidth="137.0" text="Nic No" />
-                            <TableColumn prefWidth="240.0" text="Name" />
-                              <TableColumn prefWidth="129.0" text="Contact" />
+                            <TableColumn prefWidth="137.0" style="-fx-background-color: #242729;">
+                                 <graphic>
+                                    <Label text="Nic No" textFill="#5c6368" />
+                                 </graphic></TableColumn>
+                            <TableColumn prefWidth="240.0" style="-fx-background-color: #242729;">
+                                 <graphic>
+                                    <Label text="Name" textFill="#5c6368" />
+                                 </graphic></TableColumn>
+                              <TableColumn prefWidth="129.0" style="-fx-background-color: #242729;">
+                                 <graphic>
+                                    <Label text="Contact" textFill="#5c6368" />
+                                 </graphic></TableColumn>
                           </columns>
                         </TableView>
                      </children>
