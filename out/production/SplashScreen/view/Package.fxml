@@ -30,7 +30,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <VBox layoutY="100.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+                        <VBox layoutY="100.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="927.0">
                                  <children>
@@ -41,7 +41,7 @@
                                        <font>
                                           <Font name="Times New Roman Bold" size="15.0" />
                                        </font></Label>
-                                    <TextField prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
+                                    <TextField fx:id="lbl_packageName" prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="927.0">
@@ -53,19 +53,7 @@
                                        <font>
                                           <Font name="Times New Roman Bold" size="15.0" />
                                        </font></Label>
-                                    <TextField prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="927.0">
-                                 <children>
-                                    <Label prefHeight="18.0" prefWidth="140.0" text="Label" textFill="#5c6368">
-                                       <HBox.margin>
-                                          <Insets left="20.0" />
-                                       </HBox.margin>
-                                       <font>
-                                          <Font name="Times New Roman Bold" size="15.0" />
-                                       </font></Label>
-                                    <TextField prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
+                                    <TextField fx:id="lbl_packagePrice" prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0">
@@ -77,7 +65,7 @@
                                        <font>
                                           <Font name="Times New Roman Bold" size="15.0" />
                                        </font></Label>
-                                    <TextField prefHeight="105.0" prefWidth="539.0" style="-fx-background-color: #5C6368;" />
+                                    <TextField fx:id="lbl_packageDescription" prefHeight="105.0" prefWidth="539.0" style="-fx-background-color: #5C6368;" />
                                  </children>
                               </HBox>
                            </children>
@@ -87,7 +75,7 @@
                               <Insets left="15.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" layoutY="6.0" prefHeight="56.0" prefWidth="499.0" spacing="20.0" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="428.0" AnchorPane.topAnchor="0.0">
+                        <HBox alignment="CENTER_LEFT" layoutY="6.0" prefHeight="56.0" prefWidth="589.0" spacing="20.0" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <Label styleClass="font" text="Package No" textFill="#5c6368">
                                  <font>
@@ -97,7 +85,8 @@
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #5C6368;" />
+                              <TextField fx:id="lbl_packageNo" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #5C6368;" />
+                              <ComboBox fx:id="cmb_packageNo" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #5C6368;" />
                            </children>
                         </HBox>
                      </children>
@@ -110,7 +99,7 @@
                            <font>
                               <Font size="15.0" />
                            </font></JFXButton>
-                        <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #5C6368;" text="Save" textFill="#242729">
+                        <JFXButton buttonType="RAISED" onMouseClicked="#save_package" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #5C6368;" text="Save" textFill="#242729">
                            <HBox.margin>
                               <Insets right="50.0" />
                            </HBox.margin>

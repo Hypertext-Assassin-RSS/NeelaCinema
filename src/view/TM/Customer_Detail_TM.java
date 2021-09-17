@@ -1,14 +1,14 @@
-package model;
+package view.TM;
 
-public class customer_Details {
+public class Customer_Detail_TM {
     private String id;
     private String name;
     private String contact;
 
-    public customer_Details() {
+    public Customer_Detail_TM() {
     }
 
-    public customer_Details(String id, String name, String contact) {
+    public Customer_Detail_TM(String id, String name, String contact) {
         this.setId(id);
         this.setName(name);
         this.setContact(contact);
@@ -40,7 +40,7 @@ public class customer_Details {
 
     @Override
     public String toString() {
-        return "customer_Details{" +
+        return "Customer_Detail_TM{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", contact='" + contact + '\'' +

@@ -1,16 +1,17 @@
 package db;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class db_Connection {
+public class DbConnection {
 
-    private static db_Connection dbConnection=null;
+    private static DbConnection dbConnection=null;
     private Connection connection;
 
 
-    private db_Connection() throws ClassNotFoundException, SQLException {
+    private DbConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection = DriverManager.getConnection(
                 "jdbc:mysql://127.0.0.1:3306/Neela",
@@ -19,9 +20,9 @@ public class db_Connection {
     }
 
 
-    public static db_Connection getInstance() throws ClassNotFoundException, SQLException {
+    public static DbConnection getInstance() throws ClassNotFoundException, SQLException {
         if (dbConnection==null){
-            dbConnection= new db_Connection();
+            dbConnection= new DbConnection();
         }
         return dbConnection;
 
@@ -32,4 +33,3 @@ public class db_Connection {
         return connection;
     }
 }
-
