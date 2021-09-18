@@ -5,10 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import model.Package;
@@ -20,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Customer_Detail_Controller {
     public TableView tblCustomer;
@@ -35,6 +33,10 @@ public class Customer_Detail_Controller {
     @FXML
     private TextField txtContact;
 
+    @FXML
+    private ComboBox<String> cmbNicNo;
+
+
     public void initialize(){
 
         try {
@@ -43,11 +45,37 @@ public class Customer_Detail_Controller {
             colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
 
             loadAllCustomers();
+            loadnicNo();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        cmbNicNo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            try {
+                setCustomerData(newValue);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private void setCustomerData(String nicNo) throws SQLException, ClassNotFoundException {
+        customer_Details c1 = new customerController().searchCustomer(nicNo);
+        if (c1==null){
+            new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
+        }else{
+            txtId.setText(c1.getId());
+            txtName.setText(c1.getName());
+            txtContact.setText(c1.getContact());
+        }
+    }
+
+    private void loadnicNo() throws SQLException, ClassNotFoundException {
+        List<String> nicNo = new customerController().getNicNo();
+        cmbNicNo.getItems().addAll(nicNo);
     }
 
     private void loadAllCustomers() throws SQLException, ClassNotFoundException {

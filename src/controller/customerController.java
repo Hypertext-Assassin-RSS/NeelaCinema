@@ -33,4 +33,16 @@ public class customerController {
 
         return  stm.executeUpdate() > 0;
     }
+    public customer_Details searchCustomer(String nicNo) throws SQLException, ClassNotFoundException {
+        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT  * FROM Customer_Detail WHERE ID ='" + nicNo + "'").executeQuery();
+        if (rst.next()){
+            return new customer_Details(
+                    rst.getString(1),
+                    rst.getString(2),
+                    rst.getString(3)
+            );
+        }else{
+            return null;
+        }
+    }
 }

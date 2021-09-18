@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -131,13 +132,18 @@
                   </AnchorPane>
                </left>
                <top>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="731.0" style="-fx-background-color: #5C6368;" styleClass="box" BorderPane.alignment="CENTER">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="731.0" spacing="180.0" style="-fx-background-color: #5C6368;" styleClass="box" BorderPane.alignment="CENTER">
                      <children>
                         <Label text="Customer" textFill="#242729">
                            <font>
                               <Font name="Cambria Bold" size="50.0" />
                            </font>
                         </Label>
+                        <ComboBox fx:id="cmbNicNo" prefHeight="24.0" prefWidth="160.0" style="-fx-background-color: #242729;">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </ComboBox>
                      </children>
                   </HBox>
                </top>
