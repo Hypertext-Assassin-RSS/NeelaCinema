@@ -33,7 +33,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -49,7 +49,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -65,7 +65,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -81,7 +81,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <ComboBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <ComboBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -97,7 +97,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -113,7 +113,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -129,7 +129,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -145,7 +145,7 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
@@ -180,8 +180,8 @@
                <right>
                   <TableView prefHeight="422.0" prefWidth="557.0" style="-fx-background-color: #242729;" BorderPane.alignment="CENTER">
                     <columns>
-                      <TableColumn prefWidth="75.0" style="-fx-background-color: #5C6368;" text="C1" />
-                      <TableColumn prefWidth="75.0" style="-fx-background-color: #5C6368;" text="C2" />
+                      <TableColumn prefWidth="75.0" style="-fx-background-color: #5C6368; -fx-text-fill: white;" text="C1" />
+                      <TableColumn prefWidth="75.0" style="-fx-background-color: #5C6368; -fx-text-fill: white;" text="C2" />
                     </columns>
                      <BorderPane.margin>
                         <Insets left="5.0" />
@@ -209,7 +209,7 @@
                                           <Font name="Times New Roman Bold Italic" size="17.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="284.0" spacing="20.0" styleClass="textFild">
@@ -219,7 +219,7 @@
                                           <Font name="Times New Roman Bold Italic" size="17.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="318.0" spacing="20.0" styleClass="textFild">
@@ -229,7 +229,7 @@
                                           <Font name="Times New Roman Bold Italic" size="17.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" />
+                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                               </HBox>
                            </children>

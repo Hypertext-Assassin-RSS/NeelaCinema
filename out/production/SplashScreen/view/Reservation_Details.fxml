@@ -4,6 +4,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -16,47 +18,12 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #5C6368;" styleClass="backgraund" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <top>
-                  <HBox alignment="CENTER" prefHeight="70.0" prefWidth="927.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <Label text="Reservation" textFill="#030000">
-                           <font>
-                              <Font name="Lucida Bright Demibold" size="40.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </HBox>
-               </top>
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="927.0" spacing="20.0">
-                                 <children>
-                                    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="310.0" spacing="20.0" styleClass="textFild">
-                                       <children>
-                                          <Label text="Nic No" textFill="#140000">
-                                             <font>
-                                                <Font name="Times New Roman Bold Italic" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox prefWidth="200.0" style="-fx-background-color: transperent;" />
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="310.0" spacing="20.0" styleClass="textFild">
-                                       <children>
-                                          <Label text="Film No" textFill="#140000">
-                                             <font>
-                                                <Font name="Times New Roman Bold Italic" size="17.0" />
-                                             </font>
-                                          </Label>
-                                          <ComboBox prefWidth="200.0" style="-fx-background-color: transperent;" />
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="557.0" spacing="20.0" styleClass="textFild">
+                              <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="332.0" spacing="20.0" styleClass="textFild">
                                  <children>
                                     <Label prefWidth="150.0" text="Customer Name" textFill="#140000">
                                        <font>
@@ -66,10 +33,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -82,10 +49,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -98,10 +65,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -114,10 +81,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefHeight="25.0" prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <ComboBox prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -130,10 +97,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -146,10 +113,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -162,10 +129,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
@@ -178,10 +145,10 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField prefWidth="440.0" style="-fx-background-color: transperent;" />
+                                    <TextField prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="20.0" right="300.0" />
+                                    <Insets left="5.0" />
                                  </VBox.margin>
                               </HBox>
                            </children>
@@ -190,13 +157,16 @@
                   </AnchorPane>
                </center>
                <bottom>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+                  <HBox alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="927.0" spacing="50.0" BorderPane.alignment="CENTER_LEFT">
                      <children>
-                        <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #000000;" text="Clear" textFill="#5c6368">
+                        <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Clear" textFill="#5c6368">
                            <font>
                               <Font name="Times New Roman Bold" size="15.0" />
-                           </font></JFXButton>
-                        <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #000000;" text="Save" textFill="#5c6368">
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton buttonType="RAISED" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Save" textFill="#5c6368">
                            <HBox.margin>
                               <Insets right="50.0" />
                            </HBox.margin>
@@ -206,7 +176,67 @@
                         </JFXButton>
                      </children>
                   </HBox>
-               </bottom></BorderPane>
+               </bottom>
+               <right>
+                  <TableView prefHeight="422.0" prefWidth="557.0" style="-fx-background-color: #242729;" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn prefWidth="75.0" style="-fx-background-color: #5C6368; -fx-text-fill: white;" text="C1" />
+                      <TableColumn prefWidth="75.0" style="-fx-background-color: #5C6368; -fx-text-fill: white;" text="C2" />
+                    </columns>
+                     <BorderPane.margin>
+                        <Insets left="5.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </right>
+               <top>
+                  <VBox prefHeight="144.0" prefWidth="927.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="927.0" style="-fx-background-color: #242729;">
+                           <children>
+                              <Label text="Reservation" textFill="#030000">
+                                 <font>
+                                    <Font name="Lucida Bright Demibold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="927.0" spacing="10.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="270.0" spacing="20.0" styleClass="textFild">
+                                 <children>
+                                    <Label text="Nic No" textFill="#140000">
+                                       <font>
+                                          <Font name="Times New Roman Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="284.0" spacing="20.0" styleClass="textFild">
+                                 <children>
+                                    <Label text="Film No" textFill="#140000">
+                                       <font>
+                                          <Font name="Times New Roman Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="318.0" spacing="20.0" styleClass="textFild">
+                                 <children>
+                                    <Label text="Package No" textFill="#140000">
+                                       <font>
+                                          <Font name="Times New Roman Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </top></BorderPane>
          </children>
       </AnchorPane>
    </children>

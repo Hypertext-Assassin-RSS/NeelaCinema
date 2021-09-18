@@ -41,5 +41,5 @@
       -fx-border-radius: 0 0 10 10;
   }
   .font{
-      -fx-font-color:black;
+      -fx-text-fill: white;
   }

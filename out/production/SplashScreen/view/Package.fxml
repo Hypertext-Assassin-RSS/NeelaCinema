@@ -41,7 +41,7 @@
                                        <font>
                                           <Font name="Times New Roman Bold" size="15.0" />
                                        </font></Label>
-                                    <TextField fx:id="lbl_packageName" prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
+                                    <TextField fx:id="lbl_packageName" prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" styleClass="font" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="927.0">
@@ -53,7 +53,7 @@
                                        <font>
                                           <Font name="Times New Roman Bold" size="15.0" />
                                        </font></Label>
-                                    <TextField fx:id="lbl_packagePrice" prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" />
+                                    <TextField fx:id="lbl_packagePrice" prefHeight="25.0" prefWidth="540.0" style="-fx-background-color: #5C6368;" styleClass="font" />
                                  </children>
                               </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0">
@@ -65,7 +65,7 @@
                                        <font>
                                           <Font name="Times New Roman Bold" size="15.0" />
                                        </font></Label>
-                                    <TextField fx:id="lbl_packageDescription" prefHeight="105.0" prefWidth="539.0" style="-fx-background-color: #5C6368;" />
+                                    <TextField fx:id="lbl_packageDescription" alignment="TOP_LEFT" prefHeight="105.0" prefWidth="539.0" style="-fx-background-color: #5C6368;" styleClass="font" />
                                  </children>
                               </HBox>
                            </children>
@@ -77,7 +77,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutY="6.0" prefHeight="56.0" prefWidth="589.0" spacing="20.0" AnchorPane.bottomAnchor="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="338.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Label styleClass="font" text="Package No" textFill="#5c6368">
+                              <Label text="Package No" textFill="#5c6368">
                                  <font>
                                     <Font name="Times New Roman Bold" size="15.0" />
                                  </font>
@@ -85,8 +85,8 @@
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <TextField fx:id="lbl_packageNo" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #5C6368;" />
-                              <ComboBox fx:id="cmb_packageNo" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #5C6368;" />
+                              <TextField fx:id="lbl_packageNo" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #5C6368;" styleClass="font" />
+                              <ComboBox fx:id="cmb_packageNo" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #5C6368;" styleClass="font" />
                            </children>
                         </HBox>
                      </children>
