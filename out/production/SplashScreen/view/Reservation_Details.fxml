@@ -62,24 +62,11 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Label>
-                                    <TextField fx:id="txttCusContact" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
+                                    <TextField fx:id="txtCusContact" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                                  <VBox.margin>
                                     <Insets left="5.0" />
                                  </VBox.margin>
-                              </HBox>
-                              <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
-                                 <children>
-                                    <Label prefWidth="150.0" text="Film No" textFill="#140000">
-                                       <font>
-                                          <Font name="Times New Roman Bold Italic" size="17.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="5.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <TextField fx:id="txtFilmNo" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
-                                 </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="34.0" spacing="20.0" styleClass="textFild">
                                  <children>
@@ -237,12 +224,12 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="284.0" spacing="20.0" styleClass="textFild">
                                  <children>
-                                    <Label text="Film No" textFill="#140000">
+                                    <Label prefHeight="20.0" prefWidth="96.0" text="Film Name" textFill="#140000">
                                        <font>
                                           <Font name="Times New Roman Bold Italic" size="17.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox fx:id="cmbFilmNo" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
+                                    <ComboBox fx:id="cmbFilmName" prefWidth="200.0" style="-fx-background-color: #242729;" styleClass="font" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="318.0" spacing="20.0" styleClass="textFild">

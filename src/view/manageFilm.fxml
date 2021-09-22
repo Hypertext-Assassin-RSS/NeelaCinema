@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -28,9 +31,9 @@
                      </children></HBox>
                </top>
                <center>
-                  <AnchorPane prefHeight="644.0" prefWidth="1009.0" style="-fx-background-color: #242729;" BorderPane.alignment="CENTER">
+                  <AnchorPane prefHeight="644.0" prefWidth="437.0" style="-fx-background-color: #242729;" BorderPane.alignment="CENTER">
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <VBox prefHeight="644.0" prefWidth="402.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #000000;">
                                  <children>
@@ -41,33 +44,47 @@
                                     </ImageView>
                                  </children>
                               </HBox>
-                              <HBox prefHeight="41.0" prefWidth="651.0">
+                              <HBox alignment="CENTER" prefHeight="41.0" prefWidth="651.0" spacing="10.0">
                                  <children>
-                                    <Label text="Label" />
-                                    <TextField />
+                                    <Label text="Film Name" textFill="WHITE" />
+                                    <TextField fx:id="textFilmName" prefWidth="250.0" />
                                  </children></HBox>
-                              <HBox prefHeight="41.0" prefWidth="651.0">
+                              <HBox alignment="CENTER" prefHeight="41.0" prefWidth="651.0" spacing="10.0">
                                  <children>
-                                    <Label text="Label" />
-                                    <TextField />
+                                    <Label text="Studio No" textFill="WHITE" />
+                                    <ComboBox fx:id="cmbStudioNo" prefWidth="250.0" />
                                  </children>
                               </HBox>
-                              <HBox prefHeight="41.0" prefWidth="651.0">
+                              <HBox alignment="CENTER" prefHeight="41.0" prefWidth="651.0" spacing="10.0">
                                  <children>
-                                    <Label text="Label" />
-                                    <TextField />
+                                    <Label text="Show Time" textFill="WHITE" />
+                                    <TextField fx:id="textShowTime" prefWidth="250.0" />
                                  </children>
                               </HBox>
-                              <HBox prefHeight="41.0" prefWidth="651.0">
+                              <HBox alignment="CENTER" prefHeight="41.0" prefWidth="651.0" spacing="10.0">
                                  <children>
-                                    <Label text="Label" />
-                                    <TextField />
+                                    <Label text="Start Date" textFill="WHITE" />
+                                    <TextField fx:id="textStartDate" prefWidth="250.0" />
                                  </children>
                               </HBox>
-                              <HBox prefHeight="41.0" prefWidth="651.0">
+                              <HBox alignment="CENTER" prefHeight="41.0" prefWidth="651.0" spacing="10.0">
                                  <children>
-                                    <Label text="Label" />
-                                    <TextField />
+                                    <Label text="End Date" textFill="WHITE" />
+                                    <TextField fx:id="textEndDate" prefWidth="250.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: black;" text="Clear" textFill="WHITE">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" onMouseClicked="#saveMovie" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </JFXButton>
                                  </children>
                               </HBox>
                            </children>
@@ -76,12 +93,39 @@
                   </AnchorPane>
                </center>
                <right>
-                  <TableView prefHeight="644.0" prefWidth="649.0" style="-fx-background-color: #5C6368;" BorderPane.alignment="CENTER">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
+                  <AnchorPane prefHeight="644.0" prefWidth="899.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tblFilm" prefHeight="534.0" prefWidth="517.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <columns>
+                              <TableColumn fx:id="colFilmName" prefWidth="267.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Film Name" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colStudioNo" prefWidth="87.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Studio No" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colShowTime" prefWidth="154.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Show Time" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colStartDate" prefWidth="194.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Start Date" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colEndDate" prefWidth="168.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="End Date" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
                </right>
             </BorderPane>
          </children></AnchorPane>

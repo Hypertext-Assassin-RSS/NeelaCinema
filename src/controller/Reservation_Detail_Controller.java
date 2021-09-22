@@ -22,7 +22,7 @@ public class Reservation_Detail_Controller {
     private TextField txtFilmName;
 
     @FXML
-    private TextField txttCusContact;
+    private TextField txtCusContact;
 
     @FXML
     private ComboBox<String> cmbTicketQTY;
@@ -40,7 +40,7 @@ public class Reservation_Detail_Controller {
     private ComboBox<String> cmbNicNo;
 
     @FXML
-    private ComboBox<String> cmbFilmNo;
+    private ComboBox<String> cmbFilmName;
 
     @FXML
     private ComboBox<String> cmbPackageNo;
@@ -48,8 +48,6 @@ public class Reservation_Detail_Controller {
     @FXML
     private TextField txtPackageNo;
 
-    @FXML
-    private TextField txtFilmNo;
 
     @FXML
     private TextField txtNicNo;
@@ -64,6 +62,7 @@ public class Reservation_Detail_Controller {
         try {
             loadPackageNo();
             loadnicNo();
+            loadFilmNAme();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -79,6 +78,11 @@ public class Reservation_Detail_Controller {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
+        });
+        cmbFilmName.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            txtFilmName.setText(newValue);
+
+
         });
         cmbPackageNo.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             txtPackageNo.setText(newValue);
@@ -97,6 +101,11 @@ public class Reservation_Detail_Controller {
 
         }
 
+    private void loadFilmNAme() throws SQLException, ClassNotFoundException {
+        List<String> filmName = new Film_Controller().getFilmName();
+        cmbFilmName.getItems().addAll(filmName);
+    }
+
     private void setCustomerData(String nicNo) throws SQLException, ClassNotFoundException {
         customer_Details c1 = new customerController().searchCustomer(nicNo);
         if (c1==null){
@@ -104,7 +113,7 @@ public class Reservation_Detail_Controller {
         }else{
             txtNicNo.setText(c1.getId());
             txtCusName.setText(c1.getName());
-            txttCusContact.setText(c1.getContact());
+            txtCusContact.setText(c1.getContact());
         }
     }
 
