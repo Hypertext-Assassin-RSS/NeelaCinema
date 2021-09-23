@@ -114,9 +114,9 @@ public class Customer_Detail_Controller {
                 txtContact.getText()
         );
         if (save_Customer_Detalis(cd))
-            new Alert(Alert.AlertType.CONFIRMATION,"SAVED").show();
+            new Alert(Alert.AlertType.CONFIRMATION,"Saved...").show();
         else
-            new Alert(Alert.AlertType.WARNING,"TRY AGAIN").show();
+            new Alert(Alert.AlertType.WARNING,"Try Again...").show();
 
     }
 

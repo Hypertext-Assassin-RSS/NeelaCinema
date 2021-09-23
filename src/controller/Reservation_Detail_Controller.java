@@ -1,15 +1,21 @@
 package controller;
 
+import db.DbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import model.Package;
 import model.customer_Details;
+import model.reservation;
+import view.TM.ReservationTM;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,21 +54,44 @@ public class Reservation_Detail_Controller {
     @FXML
     private TextField txtPackageNo;
 
-
     @FXML
     private TextField txtNicNo;
 
+    @FXML
+    private TextField txtTicketQTY;
 
+    @FXML
+    private TextField txtReservationNo;
+
+    @FXML
+    private TableView<ReservationTM> tblReservation;
+
+    @FXML
+    private TableColumn<?, ?> colNic;
+
+    @FXML
+    private TableColumn<?, ?> colFilmName;
+
+    @FXML
+    private TableColumn<?, ?> colPackageNo;
+
+    @FXML
+    private TableColumn<?, ?> colTicketQTY;
 
 
     private static ArrayList<String> QTY = new ArrayList<>();
 
     public void initialize(){
-
         try {
+            colNic.setCellValueFactory(new PropertyValueFactory<>("cusNicNo"));
+            colFilmName.setCellValueFactory(new PropertyValueFactory<>("filmName"));
+            colPackageNo.setCellValueFactory(new PropertyValueFactory<>("packageNo"));
+            colTicketQTY.setCellValueFactory(new PropertyValueFactory<>("ticketQTY"));
+
             loadPackageNo();
             loadnicNo();
             loadFilmNAme();
+            loadAllReservations();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -94,12 +123,70 @@ public class Reservation_Detail_Controller {
                 e.printStackTrace();
             }
         });
+        cmbTicketQTY.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            txtTicketQTY.setText(newValue);
+        });
 
 
         ObservableList<String> observableList = FXCollections.observableArrayList();
         cmbTicketQTY.getItems().addAll("1","2","3","4","5","6","7","8","9","10");
 
+
         }
+
+    private void loadAllReservations() throws SQLException, ClassNotFoundException {
+        Connection connection = DbConnection.getInstance().getConnection();
+        Statement statement = connection.createStatement();
+        String query = "SELECT * FROM ReservationDetails";
+        ResultSet resultSet = statement.executeQuery(query);
+
+        ArrayList<reservation> reservations = new ArrayList<>();
+        while (resultSet.next()){
+            reservations.add(new reservation(
+               resultSet.getString(1),
+                    resultSet.getString(4),
+                    resultSet.getString(6),
+                    resultSet.getInt(5)
+            ));
+        }
+        setReservationToTable(reservations);
+    }
+
+    private void setReservationToTable(ArrayList<reservation> reservations) {
+        ObservableList<ReservationTM> observableList = FXCollections.observableArrayList();
+        reservations.forEach(reservation -> {
+            observableList.add(new ReservationTM(reservation.getCusNicNo(),
+                    reservation.getFilmName(),
+                    reservation.getPackageNo(),
+                    reservation.getTicketQTY()));
+        });
+        tblReservation.setItems(observableList);
+    }
+
+    @FXML
+    void saveReservation(MouseEvent event) throws SQLException, ClassNotFoundException {
+    reservation r1 = new reservation(
+            txtNicNo.getText(),
+            txtCusName.getText(),
+            txtCusContact.getText(),
+            txtFilmName.getText(),
+            Integer.parseInt(txtTicketQTY.getText()),
+            txtPackageNo.getText(),
+            txtPackageName.getText(),
+            txtPackageDescription.getText(),
+            Double.parseDouble(txtPackagePrice.getText()),
+            txtReservationNo.getText()
+    );
+    if (saveReservationDetails(r1)) {
+        new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
+    }else {
+        new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+    }
+    }
+
+    private boolean saveReservationDetails(reservation r) throws SQLException, ClassNotFoundException {
+        return new reservationController().saveReservation(r);
+    }
 
     private void loadFilmNAme() throws SQLException, ClassNotFoundException {
         List<String> filmName = new Film_Controller().getFilmName();

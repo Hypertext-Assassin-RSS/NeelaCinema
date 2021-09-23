@@ -1,16 +1,16 @@
-package model;
+package view.TM;
 
 import java.util.Objects;
 
-public class ticket {
+public class TicketTM {
     private double price;
     private String type;
     private String location;
 
-    public ticket() {
+    public TicketTM() {
     }
 
-    public ticket(double price, String type, String location) {
+    public TicketTM(double price, String type, String location) {
         this.setPrice(price);
         this.setType(type);
         this.setLocation(location);
@@ -42,7 +42,7 @@ public class ticket {
 
     @Override
     public String toString() {
-        return "ticket{" +
+        return "TicketTM{" +
                 "price=" + price +
                 ", type='" + type + '\'' +
                 ", location='" + location + '\'' +
@@ -53,8 +53,8 @@ public class ticket {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ticket ticket = (ticket) o;
-        return Double.compare(ticket.price, price) == 0 && Objects.equals(type, ticket.type) && Objects.equals(location, ticket.location);
+        TicketTM ticketTM = (TicketTM) o;
+        return Double.compare(ticketTM.price, price) == 0 && Objects.equals(type, ticketTM.type) && Objects.equals(location, ticketTM.location);
     }
 
     @Override

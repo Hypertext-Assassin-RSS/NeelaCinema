@@ -60,11 +60,11 @@
                                     </ImageView>
                                  </graphic>
                               </JFXButton>
-                              <JFXButton buttonType="RAISED" text="PACKAGE">
+                              <JFXButton buttonType="RAISED" onMouseClicked="#openAddTicket" text="PACKAGE">
                                  <graphic>
                                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../img/box.png" />
+                                          <Image url="@../img/ticket.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
@@ -121,9 +121,9 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="592.0" spacing="20.0" style="-fx-background-color: #E10000;">
                      <children>
-                        <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" size="30" />
-                        <MaterialDesignIconView glyphName="VECTOR_ARRANGE_BELOW" size="30" />
-                        <MaterialDesignIconView glyphName="CLOSE_CIRCLE_OUTLINE" size="30">
+                        <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" onMouseClicked="#mini" size="30" />
+                        <MaterialDesignIconView glyphName="VECTOR_ARRANGE_BELOW" onMouseClicked="#max" size="30" />
+                        <MaterialDesignIconView glyphName="CLOSE_CIRCLE_OUTLINE" onMouseClicked="#close" size="30">
                            <HBox.margin>
                               <Insets right="10.0" />
                            </HBox.margin>

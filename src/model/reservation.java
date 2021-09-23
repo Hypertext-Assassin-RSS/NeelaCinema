@@ -1,31 +1,33 @@
 package model;
 
+import java.util.Objects;
+
 public class reservation {
     private String cusNicNo;
     private String cusName;
     private String cusContact;
-    private String filmNo;
     private String filmName;
-    private String ticketQTY;
+    private Integer ticketQTY;
     private String packageNo;
     private String packageName;
     private String packageDescription;
     private double packagePrice;
+    private String reservationNo;
 
-    public reservation() {
+    public reservation(String string, String resultSetString, String setString, int anInt) {
     }
 
-    public reservation(String cusNicNo, String cusName, String cusContact, String filmNo, String filmName, String ticketQTY, String packageNo, String packageName, String packageDescription, double packagePrice) {
+    public reservation(String cusNicNo, String cusName, String cusContact, String filmName, Integer ticketQTY, String packageNo, String packageName, String packageDescription, double packagePrice, String reservationNo) {
         this.setCusNicNo(cusNicNo);
         this.setCusName(cusName);
         this.setCusContact(cusContact);
-        this.setFilmNo(filmNo);
         this.setFilmName(filmName);
         this.setTicketQTY(ticketQTY);
         this.setPackageNo(packageNo);
         this.setPackageName(packageName);
         this.setPackageDescription(packageDescription);
         this.setPackagePrice(packagePrice);
+        this.setReservationNo(reservationNo);
     }
 
     public String getCusNicNo() {
@@ -52,14 +54,6 @@ public class reservation {
         this.cusContact = cusContact;
     }
 
-    public String getFilmNo() {
-        return filmNo;
-    }
-
-    public void setFilmNo(String filmNo) {
-        this.filmNo = filmNo;
-    }
-
     public String getFilmName() {
         return filmName;
     }
@@ -68,11 +62,11 @@ public class reservation {
         this.filmName = filmName;
     }
 
-    public String getTicketQTY() {
+    public Integer getTicketQTY() {
         return ticketQTY;
     }
 
-    public void setTicketQTY(String ticketQTY) {
+    public void setTicketQTY(Integer ticketQTY) {
         this.ticketQTY = ticketQTY;
     }
 
@@ -108,19 +102,40 @@ public class reservation {
         this.packagePrice = packagePrice;
     }
 
+    public String getReservationNo() {
+        return reservationNo;
+    }
+
+    public void setReservationNo(String reservationNo) {
+        this.reservationNo = reservationNo;
+    }
+
     @Override
     public String toString() {
         return "reservation{" +
                 "cusNicNo='" + cusNicNo + '\'' +
                 ", cusName='" + cusName + '\'' +
                 ", cusContact='" + cusContact + '\'' +
-                ", filmNo='" + filmNo + '\'' +
                 ", filmName='" + filmName + '\'' +
-                ", ticketQTY='" + ticketQTY + '\'' +
+                ", ticketQTY=" + ticketQTY +
                 ", packageNo='" + packageNo + '\'' +
                 ", packageName='" + packageName + '\'' +
                 ", packageDescription='" + packageDescription + '\'' +
                 ", packagePrice=" + packagePrice +
+                ", reservationNo='" + reservationNo + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        reservation that = (reservation) o;
+        return Double.compare(that.packagePrice, packagePrice) == 0 && Objects.equals(cusNicNo, that.cusNicNo) && Objects.equals(cusName, that.cusName) && Objects.equals(cusContact, that.cusContact) && Objects.equals(filmName, that.filmName) && Objects.equals(ticketQTY, that.ticketQTY) && Objects.equals(packageNo, that.packageNo) && Objects.equals(packageName, that.packageName) && Objects.equals(packageDescription, that.packageDescription) && Objects.equals(reservationNo, that.reservationNo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cusNicNo, cusName, cusContact, filmName, ticketQTY, packageNo, packageName, packageDescription, packagePrice, reservationNo);
     }
 }
