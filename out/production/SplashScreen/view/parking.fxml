@@ -31,8 +31,10 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </ImageView>
-                        <HBox alignment="CENTER" prefHeight="112.0" prefWidth="284.0" spacing="20.0">
+                        <HBox alignment="CENTER_RIGHT" prefHeight="170.0" prefWidth="686.0" spacing="20.0">
                            <children>
+                              <ComboBox fx:id="cmbVehicleType" prefWidth="150.0" promptText="Vehicle Type" />
+                              <ComboBox fx:id="cmbNicNo" prefWidth="150.0" promptText="Nic No" />
                               <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #D35400;" text="Clear" textFill="WHITE">
                                  <font>
                                     <Font name="Times New Roman" size="12.0" />
@@ -69,7 +71,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox prefWidth="150.0" />
+                                    <TextField />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="45.0" prefWidth="495.0" spacing="20.0">
@@ -79,7 +81,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField />
+                                    <TextField fx:id="txtName" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="45.0" prefWidth="495.0" spacing="20.0">
@@ -89,7 +91,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField />
+                                    <TextField fx:id="txtContact" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="45.0" prefWidth="495.0" spacing="20.0">
@@ -99,7 +101,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField />
+                                    <TextField fx:id="txtVehicleNo" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="45.0" prefWidth="495.0" spacing="20.0">
@@ -109,7 +111,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox prefWidth="150.0" />
+                                    <TextField />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="118.0" prefWidth="495.0" spacing="20.0">
@@ -140,12 +142,12 @@
                         <Insets bottom="20.0" left="20.0" right="20.0" />
                      </BorderPane.margin>
                      <children>
-                        <TableView layoutX="31.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tblParking" layoutX="31.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn prefWidth="318.0" text="Name" />
-                            <TableColumn prefWidth="139.0" text="Contact" />
-                              <TableColumn prefWidth="126.0" text="Vehicle No" />
-                              <TableColumn prefWidth="121.0" text="Parking No" />
+                            <TableColumn fx:id="colName" prefWidth="318.0" text="Name" />
+                            <TableColumn fx:id="colContact" prefWidth="139.0" text="Contact" />
+                              <TableColumn fx:id="colVehicleNo" prefWidth="126.0" text="Vehicle No" />
+                              <TableColumn fx:id="colParkingNo" prefWidth="121.0" text="Parking No" />
                           </columns>
                         </TableView>
                      </children>

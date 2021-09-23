@@ -18,7 +18,7 @@
          <left>
             <AnchorPane prefHeight="619.0" prefWidth="301.0" style="-fx-background-color: black; -fx-background-radius: 5;" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="TOP_CENTER" maxHeight="640.0" prefHeight="640.0" prefWidth="301.0" spacing="25.0" style="-fx-background-radius: 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox alignment="TOP_CENTER" maxHeight="640.0" prefHeight="640.0" prefWidth="301.0" spacing="40.0" style="-fx-background-radius: 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <JFXButton buttonType="RAISED" prefHeight="62.0" prefWidth="144.0" text="Home" textFill="#5c6368">
                            <VBox.margin>
@@ -99,17 +99,6 @@
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIconView fill="#5c6368" glyphName="TICKET" size="25" />
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton alignment="CENTER" buttonType="RAISED" onMouseClicked="#Open_Reservation_Details" prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: red; -fx-background-radius: 5; -fx-border-color: transperent; -fx-border-radius: 5;" text="ReservationDetails" textAlignment="CENTER" textFill="#5c6368">
-                           <font>
-                              <Font name="System Bold" size="21.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
                            </graphic>
                         </JFXButton>
                      </children>

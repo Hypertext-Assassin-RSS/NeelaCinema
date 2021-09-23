@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -13,48 +14,34 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login_Controller">
+<AnchorPane id="AnchorPane" fx:id="context" prefHeight="720.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login_Controller">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: Black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <top>
-                  <HBox alignment="CENTER" prefHeight="140.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <ImageView fitHeight="112.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/png/014-employee.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </ImageView>
-                     </children>
-                  </HBox>
-               </top>
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="100.0" text="User" textFill="WHITE">
+                                    <Label prefWidth="150.0" text="User" textFill="WHITE">
                                        <font>
-                                          <Font name="Times New Roman Bold" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="25.0" />
                                        </font>
                                     </Label>
-                                    <TextField />
+                                    <TextField prefHeight="26.0" prefWidth="340.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0" spacing="20.0">
                                  <children>
-                                    <Label prefWidth="100.0" text="Password" textFill="WHITE">
+                                    <Label prefWidth="150.0" text="Password" textFill="WHITE">
                                        <font>
-                                          <Font name="Times New Roman Bold" size="15.0" />
+                                          <Font name="Times New Roman Bold" size="25.0" />
                                        </font>
                                     </Label>
-                                    <PasswordField />
+                                    <PasswordField prefHeight="26.0" prefWidth="339.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0">
@@ -67,6 +54,88 @@
                      </children>
                   </AnchorPane>
                </center>
+               <top>
+                  <VBox prefHeight="233.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="52.0" prefWidth="1300.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="46.0" style="-fx-background-color: black;" styleClass="menubar" stylesheets="@../style/style.css">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="100.0" spacing="10.0">
+                                       <children>
+                                          <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="File" textFill="#5c6368">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Times New Roman" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Edit" textFill="#5c6368">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Times New Roman" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="view" textFill="#5c6368">
+                                             <font>
+                                                <Font name="Times New Roman" size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Help" textFill="#5c6368">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Times New Roman" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="795.0" spacing="30.0" />
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                       <children>
+                                          <MaterialDesignIconView fill="#5c6368" glyphName="WINDOW_MINIMIZE" onMouseClicked="#mini" size="25">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </MaterialDesignIconView>
+                                          <MaterialDesignIconView fill="#5c6368" glyphName="VECTOR_ARRANGE_BELOW" onMouseClicked="#max" size="25">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </MaterialDesignIconView>
+                                          <MaterialDesignIconView fill="#5c6368" glyphName="CLOSE_CIRCLE_OUTLINE" onMouseClicked="#close" size="25">
+                                             <HBox.margin>
+                                                <Insets right="-25.0" />
+                                             </HBox.margin>
+                                          </MaterialDesignIconView>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="192.0" prefWidth="1300.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/unauthorized-person.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </top>
             </BorderPane>
          </children>
       </AnchorPane>

@@ -14,7 +14,14 @@ public class reservation {
     private double packagePrice;
     private String reservationNo;
 
-    public reservation(String string, String resultSetString, String setString, int anInt) {
+    public reservation() {
+    }
+
+    public reservation(String cusNicNo, String filmName, String packageNo, int ticketQTY) {
+        this.setCusNicNo(cusNicNo);
+        this.setFilmName(filmName);
+        this.setPackageNo(packageNo);
+        this.setTicketQTY(ticketQTY);
     }
 
     public reservation(String cusNicNo, String cusName, String cusContact, String filmName, Integer ticketQTY, String packageNo, String packageName, String packageDescription, double packagePrice, String reservationNo) {

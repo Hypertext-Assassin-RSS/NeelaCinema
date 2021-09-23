@@ -203,7 +203,7 @@
                <top>
                   <VBox prefHeight="144.0" prefWidth="927.0" BorderPane.alignment="CENTER">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="927.0" style="-fx-background-color: #242729;">
+                        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="927.0" style="-fx-background-color: #242729;" styleClass="menubar">
                            <children>
                               <Label text="Reservation" textFill="#030000">
                                  <font>
