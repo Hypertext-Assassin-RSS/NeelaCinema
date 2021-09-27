@@ -2,6 +2,7 @@ package controller;
 
 import db.DbConnection;
 import model.Film;
+import model.customer_Details;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -20,6 +21,21 @@ public class Film_Controller {
         stm.setObject(5,f1.getEndDate());
 
         return  stm.executeUpdate() > 0;
+    }
+
+    public Film searchFilm(String film_name) throws SQLException, ClassNotFoundException {
+        ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT  * FROM FIlm WHERE film_name ='" + film_name + "'").executeQuery();
+        if (rst.next()){
+            return new Film(
+                    rst.getString(1),
+                    rst.getInt(2),
+                    rst.getString(3),
+                    rst.getString(4),
+                    rst.getString(5)
+            );
+        }else{
+            return null;
+        }
     }
 
 

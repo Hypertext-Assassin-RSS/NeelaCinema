@@ -31,7 +31,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </ImageView>
-                        <HBox alignment="CENTER_RIGHT" prefHeight="170.0" prefWidth="686.0" spacing="20.0">
+                        <HBox alignment="CENTER_RIGHT" prefHeight="170.0" prefWidth="655.0" spacing="20.0">
                            <children>
                               <ComboBox fx:id="cmbVehicleType" prefWidth="150.0" promptText="Vehicle Type" />
                               <ComboBox fx:id="cmbNicNo" prefWidth="150.0" promptText="Nic No" />
@@ -74,7 +74,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField />
+                                    <TextField fx:id="txtNicNo" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="45.0" prefWidth="495.0" spacing="20.0">
@@ -114,7 +114,17 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </Label>
-                                    <TextField />
+                                    <TextField fx:id="txtVehicleType" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="45.0" prefWidth="495.0" spacing="20.0">
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="78.0" text="Parking No" textFill="WHITE">
+                                       <font>
+                                          <Font name="Times New Roman" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtParkingNo" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="118.0" prefWidth="495.0" spacing="20.0">
@@ -124,7 +134,7 @@
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>
                                     </JFXButton>
-                                    <JFXButton buttonType="RAISED" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: orange;" text="Save" textFill="WHITE">
+                                    <JFXButton buttonType="RAISED" onMouseClicked="#saveParkingDetails" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: orange;" text="Save" textFill="WHITE">
                                        <font>
                                           <Font name="Times New Roman" size="12.0" />
                                        </font>

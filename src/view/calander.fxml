@@ -117,7 +117,7 @@
                               <Insets />
                            </opaqueInsets>
                            <children>
-                              <JFXButton buttonType="RAISED" prefHeight="100.0" prefWidth="150.0" ripplerFill="BLUE" styleClass="calanderNumber" text="1" textFill="#5c6368">
+                              <JFXButton buttonType="RAISED" onAction="#openDay" prefHeight="100.0" prefWidth="150.0" ripplerFill="BLUE" styleClass="calanderNumber" text="1" textFill="#5c6368">
                                  <font>
                                     <Font name="Bodoni MT" size="45.0" />
                                  </font>

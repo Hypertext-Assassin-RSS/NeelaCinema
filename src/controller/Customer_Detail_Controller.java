@@ -99,7 +99,7 @@ public class Customer_Detail_Controller {
         ObservableList<Customer_Detail_TM> obList = FXCollections.observableArrayList();
         customer_details.forEach(Customer-> {
             obList.add(
-                    new Customer_Detail_TM(Customer.getId(),Customer.getName(),Customer.getContact()));
+                    new Customer_Detail_TM(Customer.getId(), Customer.getName(), Customer.getContact()));
 
         });
         tblCustomer.setItems(obList);
