@@ -1,22 +1,23 @@
 package view.TM;
 
+import java.util.Objects;
+
 public class ParkingTM {
     private String name;
     private String contact;
     private String vehicleNo;
-    private String vehicleType;
     private int parkingNo;
 
     public ParkingTM() {
     }
 
-    public ParkingTM(String name, String contact, String vehicleNo, String vehicleType, int parkingNo) {
+    public ParkingTM(String name, String contact, String vehicleNo, int parkingNo) {
         this.setName(name);
         this.setContact(contact);
         this.setVehicleNo(vehicleNo);
-        this.setVehicleType(vehicleType);
         this.setParkingNo(parkingNo);
     }
+
 
     public String getName() {
         return name;
@@ -42,14 +43,6 @@ public class ParkingTM {
         this.vehicleNo = vehicleNo;
     }
 
-    public String getVehicleType() {
-        return vehicleType;
-    }
-
-    public void setVehicleType(String vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
     public int getParkingNo() {
         return parkingNo;
     }
@@ -64,8 +57,21 @@ public class ParkingTM {
                 "name='" + name + '\'' +
                 ", contact='" + contact + '\'' +
                 ", vehicleNo='" + vehicleNo + '\'' +
-                ", vehicleType='" + vehicleType + '\'' +
                 ", parkingNo=" + parkingNo +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ParkingTM parkingTM = (ParkingTM) o;
+        return parkingNo == parkingTM.parkingNo && Objects.equals(name, parkingTM.name) && Objects.equals(contact, parkingTM.contact) && Objects.equals(vehicleNo, parkingTM.vehicleNo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, contact, vehicleNo, parkingNo);
+    }
 }
+

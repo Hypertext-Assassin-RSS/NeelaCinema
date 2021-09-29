@@ -22,6 +22,15 @@ public class Parking {
         this.setParkingNo(parkingNo);
     }
 
+    public Parking(String name, String contact, String vehicleNo, int parkingNo) {
+        this.setName(name);
+        this.setContact(contact);
+        this.setVehicleNo(vehicleNo);
+        this.setParkingNo(parkingNo);
+
+    }
+
+
     public String getNicNo() {
         return nicNo;
     }
