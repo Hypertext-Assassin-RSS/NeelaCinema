@@ -11,7 +11,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Day;
 import model.Film;
-import model.reservation;
 import view.TM.DayTM;
 
 import java.sql.Connection;

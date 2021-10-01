@@ -189,7 +189,7 @@
                            <HBox.margin>
                               <Insets left="50.0" />
                            </HBox.margin></JFXButton>
-                        <JFXButton buttonType="RAISED" onMouseClicked="#saveReservation" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Save" textFill="#5c6368">
+                        <JFXButton buttonType="RAISED" onAction="#saveRes" onMouseClicked="#saveReservation" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Save" textFill="#5c6368">
                            <HBox.margin>
                               <Insets right="50.0" />
                            </HBox.margin>

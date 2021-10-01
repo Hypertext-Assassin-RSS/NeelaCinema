@@ -1,7 +1,9 @@
 package controller;
 
 import db.DbConnection;
+import model.customer_Details;
 import model.reservation;
+import model.reservstion_detail;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class reservationController {
+
+
     public List<String> getPackageNo() throws SQLException, ClassNotFoundException {
         ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Package").executeQuery();
         List<String> packageNo = new ArrayList<>();
@@ -48,4 +52,19 @@ public class reservationController {
         return  statement.executeUpdate() > 0;
 
     }
+    public boolean saveRes(reservstion_detail res) throws SQLException, ClassNotFoundException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String query = "INSERT INTO reservation VALUES  (?,?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(query);
+
+        statement.setObject(1,res.getCusNicNo());
+        statement.setObject(2,res.getCusName());
+        statement.setObject(3,res.getCusContact());
+        statement.setObject(4,res.getReservationNo());
+
+        return statement.executeUpdate() > 0;
+
+    }
+
 }

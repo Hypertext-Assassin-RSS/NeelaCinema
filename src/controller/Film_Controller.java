@@ -2,7 +2,6 @@ package controller;
 
 import db.DbConnection;
 import model.Film;
-import model.customer_Details;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.ContextMenuEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -43,6 +44,44 @@ public class Setting_Controller implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        
     }
+    @FXML
+    void openEmploy(ContextMenuEvent event) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("../view/Employ.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void openInvestor(ContextMenuEvent event) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("../view/investor.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void openStudio(MouseEvent event) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("../view/studio.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    @FXML
+    void penOwner(MouseEvent event) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("../view/owner.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
     @FXML
     void openAddTicket(MouseEvent event) throws IOException {
         Parent load = FXMLLoader.load(getClass().getResource("../view/Add_Ticket.fxml"));

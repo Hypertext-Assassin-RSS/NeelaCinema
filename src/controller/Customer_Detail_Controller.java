@@ -3,12 +3,10 @@ package controller;
 import db.DbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import model.Package;
 import model.customer_Details;
 import view.TM.Customer_Detail_TM;
 

@@ -3,6 +3,7 @@ package controller;
 import db.DbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -10,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import model.Package;
 import model.customer_Details;
 import model.reservation;
+import model.reservstion_detail;
 import view.TM.ReservationTM;
 
 import java.sql.Connection;
@@ -164,7 +166,27 @@ public class Reservation_Detail_Controller {
     }
 
     @FXML
+    void saveRes(ActionEvent event) throws SQLException, ClassNotFoundException {
+        reservstion_detail d1 = new reservstion_detail(
+                txtNicNo.getText(),
+                txtCusName.getText(),
+                txtCusContact.getText(),
+                txtReservationNo.getText()
+        );
+
+        if (saveRes(d1)){
+            new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
+        }else{
+            new Alert(Alert.AlertType.WARNING, "Try Again..").show();
+        }
+
+    }
+
+
+    @FXML
     void saveReservation(MouseEvent event) throws SQLException, ClassNotFoundException {
+
+
     reservation r1 = new reservation(
             txtNicNo.getText(),
             txtCusName.getText(),
@@ -182,6 +204,10 @@ public class Reservation_Detail_Controller {
     }else {
         new Alert(Alert.AlertType.WARNING, "Try Again..").show();
     }
+    }
+
+    private boolean saveRes(reservstion_detail res) throws SQLException, ClassNotFoundException {
+        return new reservationController().saveRes(res);
     }
 
     private boolean saveReservationDetails(reservation r) throws SQLException, ClassNotFoundException {
