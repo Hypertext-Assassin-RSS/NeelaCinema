@@ -189,7 +189,7 @@
                            <HBox.margin>
                               <Insets left="50.0" />
                            </HBox.margin></JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#saveRes" onMouseClicked="#saveReservation" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Save" textFill="#5c6368">
+                        <JFXButton buttonType="RAISED" onMouseClicked="#saveReservation" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Save" textFill="#5c6368">
                            <HBox.margin>
                               <Insets right="50.0" />
                            </HBox.margin>
@@ -197,19 +197,50 @@
                               <Font name="Times New Roman Bold" size="15.0" />
                            </font>
                         </JFXButton>
+                        <JFXButton buttonType="RAISED" onMouseClicked="#saveRes" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #242729;" text="Res  SAVE" textFill="#5c6368">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
                      </children>
                   </HBox>
                </bottom>
                <top>
                   <VBox prefHeight="144.0" prefWidth="927.0" BorderPane.alignment="CENTER">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="86.0" prefWidth="927.0" style="-fx-background-color: #242729;" styleClass="menubar">
+                        <HBox alignment="CENTER_RIGHT" prefHeight="86.0" prefWidth="927.0" style="-fx-background-color: #242729;" styleClass="menubar">
                            <children>
                               <Label text="Reservation" textFill="#030000">
                                  <font>
                                     <Font name="Lucida Bright Demibold" size="40.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets right="80.0" />
+                                 </HBox.margin>
                               </Label>
+                              <VBox prefHeight="97.0" prefWidth="255.0">
+                                 <children>
+                                    <Label fx:id="lblDate" alignment="CENTER" prefHeight="28.0" prefWidth="316.0" text="Date" textAlignment="CENTER" textFill="#5c6368">
+                                       <font>
+                                          <Font name="Times New Roman" size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label fx:id="lblTime" alignment="CENTER" prefHeight="28.0" prefWidth="316.0" text="Time" textAlignment="CENTER" textFill="#5c6368">
+                                       <font>
+                                          <Font name="Times New Roman" size="25.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="927.0" spacing="20.0">

@@ -45,7 +45,7 @@ public class Setting_Controller implements Initializable {
        
     }
     @FXML
-    void openEmploy(ContextMenuEvent event) throws IOException {
+    void openEmploy(MouseEvent event) throws IOException {
         Parent load = FXMLLoader.load(getClass().getResource("../view/Employ.fxml"));
         Scene scene = new Scene(load);
         Stage stage = new Stage();
@@ -54,7 +54,7 @@ public class Setting_Controller implements Initializable {
     }
 
     @FXML
-    void openInvestor(ContextMenuEvent event) throws IOException {
+    void openInvestor(MouseEvent event) throws IOException {
         Parent load = FXMLLoader.load(getClass().getResource("../view/investor.fxml"));
         Scene scene = new Scene(load);
         Stage stage = new Stage();

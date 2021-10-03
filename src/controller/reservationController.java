@@ -55,13 +55,15 @@ public class reservationController {
     public boolean saveRes(reservstion_detail res) throws SQLException, ClassNotFoundException {
         Connection connection = DbConnection.getInstance().getConnection();
 
-        String query = "INSERT INTO reservation VALUES  (?,?,?,?)";
+        String query = "INSERT INTO reservation VALUES  (?,?,?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(query);
 
-        statement.setObject(1,res.getCusNicNo());
-        statement.setObject(2,res.getCusName());
-        statement.setObject(3,res.getCusContact());
-        statement.setObject(4,res.getReservationNo());
+        statement.setObject(1,res.getReservationNo());
+        statement.setObject(2,res.getCusNicNo());
+        statement.setObject(3,res.getCusName());
+        statement.setObject(4,res.getCusContact());
+        statement.setObject(5,res.getDate());
+        statement.setObject(6,res.getTime());
 
         return statement.executeUpdate() > 0;
 

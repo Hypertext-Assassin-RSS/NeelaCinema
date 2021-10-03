@@ -3,19 +3,31 @@ package model;
 import java.util.Objects;
 
 public class reservstion_detail {
+    private String reservationNo;
     private String cusNicNo;
     private String cusName;
     private String cusContact;
-    private String reservationNo;
+    private String date;
+    private String time;
 
     public reservstion_detail() {
     }
 
-    public reservstion_detail(String cusNicNo, String cusName, String cusContact, String reservationNo) {
+    public reservstion_detail(String reservationNo, String cusNicNo, String cusName, String cusContact, String date, String time) {
+        this.setReservationNo(reservationNo);
         this.setCusNicNo(cusNicNo);
         this.setCusName(cusName);
         this.setCusContact(cusContact);
-        this.setReservationNo(reservationNo);
+        this.setDate(date);
+        this.setTime(time);
+    }
+
+    public String getReservationNo() {
+        return reservationNo;
+    }
+
+    public void setReservationNo(String reservationNo) {
+        this.reservationNo = reservationNo;
     }
 
     public String getCusNicNo() {
@@ -42,21 +54,31 @@ public class reservstion_detail {
         this.cusContact = cusContact;
     }
 
-    public String getReservationNo() {
-        return reservationNo;
+    public String getDate() {
+        return date;
     }
 
-    public void setReservationNo(String reservationNo) {
-        this.reservationNo = reservationNo;
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     @Override
     public String toString() {
         return "reservstion_detail{" +
-                "cusNicNo='" + cusNicNo + '\'' +
+                "reservationNo='" + reservationNo + '\'' +
+                ", cusNicNo='" + cusNicNo + '\'' +
                 ", cusName='" + cusName + '\'' +
                 ", cusContact='" + cusContact + '\'' +
-                ", reservationNo='" + reservationNo + '\'' +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
                 '}';
     }
 
@@ -65,11 +87,11 @@ public class reservstion_detail {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         reservstion_detail that = (reservstion_detail) o;
-        return Objects.equals(cusNicNo, that.cusNicNo) && Objects.equals(cusName, that.cusName) && Objects.equals(cusContact, that.cusContact) && Objects.equals(reservationNo, that.reservationNo);
+        return Objects.equals(reservationNo, that.reservationNo) && Objects.equals(cusNicNo, that.cusNicNo) && Objects.equals(cusName, that.cusName) && Objects.equals(cusContact, that.cusContact) && Objects.equals(date, that.date) && Objects.equals(time, that.time);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cusNicNo, cusName, cusContact, reservationNo);
+        return Objects.hash(reservationNo, cusNicNo, cusName, cusContact, date, time);
     }
 }

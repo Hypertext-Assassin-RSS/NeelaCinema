@@ -20,7 +20,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="150.0">
                            <children>
-                              <JFXButton buttonType="RAISED" onContextMenuRequested="#openInvestor" text="INVESTOR">
+                              <JFXButton buttonType="RAISED" onMouseClicked="#openInvestor" text="INVESTOR">
                                  <graphic>
                                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -29,7 +29,7 @@
                                     </ImageView>
                                  </graphic>
                               </JFXButton>
-                              <JFXButton buttonType="RAISED" onContextMenuRequested="#openEmploy" text="EMPLOY">
+                              <JFXButton buttonType="RAISED" onMouseClicked="#openEmploy" text="EMPLOY">
                                  <graphic>
                                     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

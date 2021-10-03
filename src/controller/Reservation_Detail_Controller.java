@@ -1,13 +1,16 @@
 package controller;
 
 import db.DbConnection;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.util.Duration;
 import model.Package;
 import model.customer_Details;
 import model.reservation;
@@ -18,7 +21,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Reservation_Detail_Controller {
@@ -80,6 +86,33 @@ public class Reservation_Detail_Controller {
     @FXML
     private TableColumn<?, ?> colTicketQTY;
 
+    @FXML
+    private Label lblDate;
+
+    @FXML
+    private Label lblTime;
+
+
+    private void loadDateAndTime() {
+
+        SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd");
+        String date = f.format(new Date());
+        lblDate.setText(date);
+
+
+        Timeline time = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            LocalTime currentTime = LocalTime.now();
+            lblTime.setText(
+                    currentTime.getHour() + " : " + currentTime.getMinute() +
+                            " : " + currentTime.getSecond()
+            );
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+        time.setCycleCount(Animation.INDEFINITE);
+        time.play();
+    }
+
 
     private static ArrayList<String> QTY = new ArrayList<>();
 
@@ -94,6 +127,7 @@ public class Reservation_Detail_Controller {
             loadnicNo();
             loadFilmNAme();
             loadAllReservations();
+            loadDateAndTime();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -166,12 +200,15 @@ public class Reservation_Detail_Controller {
     }
 
     @FXML
-    void saveRes(ActionEvent event) throws SQLException, ClassNotFoundException {
+    void saveRes(MouseEvent event) throws SQLException, ClassNotFoundException {
         reservstion_detail d1 = new reservstion_detail(
+                txtReservationNo.getText(),
                 txtNicNo.getText(),
                 txtCusName.getText(),
                 txtCusContact.getText(),
-                txtReservationNo.getText()
+                lblDate.getText(),
+                lblTime.getText()
+
         );
 
         if (saveRes(d1)){

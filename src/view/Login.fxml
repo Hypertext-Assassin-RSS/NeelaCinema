@@ -24,6 +24,11 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
+                              <Label fx:id="txtWarning" alignment="CENTER" prefHeight="24.0" prefWidth="563.0" text="Warning !!!" textFill="RED">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
                               <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="20.0">
                                  <children>
                                     <Label prefWidth="150.0" text="User" textFill="WHITE">
@@ -31,7 +36,7 @@
                                           <Font name="Times New Roman Bold" size="25.0" />
                                        </font>
                                     </Label>
-                                    <TextField prefHeight="26.0" prefWidth="340.0" />
+                                    <TextField fx:id="txtUser" prefHeight="26.0" prefWidth="340.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0" spacing="20.0">
@@ -41,7 +46,7 @@
                                           <Font name="Times New Roman Bold" size="25.0" />
                                        </font>
                                     </Label>
-                                    <PasswordField prefHeight="26.0" prefWidth="339.0" />
+                                    <PasswordField fx:id="txtPassword" prefHeight="26.0" prefWidth="339.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0">
