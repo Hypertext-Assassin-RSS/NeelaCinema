@@ -71,19 +71,19 @@ public class Investor_Controller {
     @FXML
     void saveInvestor(MouseEvent event) throws SQLException, ClassNotFoundException {
 
-        Owner owner = new Owner(
+        Investor investor = new Investor(
                 txtId.getText(),
                 txtName.getText(),
                 txtContact.getText()
         );
-        if (save_Owner_Details(owner))
+        if (save_Investor(investor))
             new Alert(Alert.AlertType.CONFIRMATION,"Saved...").show();
         else
             new Alert(Alert.AlertType.WARNING,"Try Again...").show();
 
     }
 
-    private boolean save_Owner_Details(Owner ow) throws SQLException, ClassNotFoundException {
-        return new Controller().save_Owner_Details(ow);
+    private boolean save_Investor(Investor in) throws SQLException, ClassNotFoundException {
+        return new Controller().save_Investor(in);
     }
 }
