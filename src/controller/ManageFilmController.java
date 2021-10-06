@@ -54,7 +54,7 @@ public class ManageFilmController {
     public void initialize(){
 
         try {
-            colFilmName.setCellValueFactory(new PropertyValueFactory<>("filName"));
+            colFilmName.setCellValueFactory(new PropertyValueFactory<>("filmName"));
             colStudioNo.setCellValueFactory(new PropertyValueFactory<>("studioNo"));
             colShowTime.setCellValueFactory(new PropertyValueFactory<>("showTime"));
             colStartDate.setCellValueFactory(new PropertyValueFactory<>("startDate"));
@@ -98,10 +98,11 @@ public class ManageFilmController {
             observableList.add(
                     new FilmTM(
                             film.getFilmName(),
+                            film.getStudioNo(),
                             film.getShowTime(),
                             film.getStartDate(),
-                            film.getEndDate(),
-                            film.getStudioNo()
+                            film.getEndDate()
+
 
 
                     ));

@@ -37,6 +37,8 @@ public class reservation {
         this.setReservationNo(reservationNo);
     }
 
+
+
     public String getCusNicNo() {
         return cusNicNo;
     }

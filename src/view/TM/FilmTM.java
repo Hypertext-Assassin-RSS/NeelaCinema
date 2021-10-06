@@ -12,12 +12,12 @@ public class FilmTM {
     public FilmTM() {
     }
 
-    public FilmTM(String filmName, String showTime, String startDate, String endDate, int studioNo) {
-        this.setStudioNo(studioNo);
-        this.setFilmName(filmName);
-        this.setShowTime(showTime);
-        this.setStartDate(startDate);
-        this.setEndDate(endDate);
+    public FilmTM(String filmName, int studioNo, String showTime, String startDate, String endDate) {
+        this.filmName = filmName;
+        this.studioNo = studioNo;
+        this.showTime = showTime;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     public String getFilmName() {

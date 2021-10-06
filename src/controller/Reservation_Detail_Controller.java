@@ -177,15 +177,17 @@ public class Reservation_Detail_Controller {
         ResultSet resultSet = statement.executeQuery(query);
 
         ArrayList<reservation> reservations = new ArrayList<>();
-        while (resultSet.next()){
+
+        while(resultSet.next()){
             reservations.add(new reservation(
-               resultSet.getString(1),
+                    resultSet.getString(1),
                     resultSet.getString(4),
                     resultSet.getString(6),
-                    resultSet.getInt(5)
+                    Integer.parseInt(resultSet.getString(5))
             ));
         }
         setReservationToTable(reservations);
+
     }
 
     private void setReservationToTable(ArrayList<reservation> reservations) {
