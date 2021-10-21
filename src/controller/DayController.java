@@ -239,7 +239,7 @@ public class DayController {
     }
 
     private boolean saveDayDetails(Day d) throws SQLException, ClassNotFoundException {
-        return new Day_Controller().saveDay(d);
+        return new Controller().saveDay(d);
     }
 
 

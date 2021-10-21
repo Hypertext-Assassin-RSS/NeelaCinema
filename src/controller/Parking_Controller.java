@@ -126,7 +126,7 @@ public class Parking_Controller {
     }
 
     private void setCustomerData(String nicNo) throws SQLException, ClassNotFoundException {
-        customer_Details c1 = new customerController().searchCustomer(nicNo);
+        customer_Details c1 = new Controller().searchCustomer(nicNo);
         if (c1==null){
             new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
         }else{
@@ -137,7 +137,7 @@ public class Parking_Controller {
     }
 
     private void loadnicNo() throws SQLException, ClassNotFoundException {
-        List<String> nicNo = new customerController().getNicNo();
+        List<String> nicNo = new Controller().getNicNo();
         cmbNicNo.getItems().addAll(nicNo);
     }
 
@@ -160,7 +160,7 @@ public class Parking_Controller {
 
 
     private boolean save_ParkingDetails(Parking p1) throws SQLException, ClassNotFoundException {
-        return new parkingController().saveParking(p1);
+        return new Controller().saveParking(p1);
     }
 
 }

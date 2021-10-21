@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1300.0" styleClass="backgraund" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DayController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="menubar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <VBox prefHeight="120.0" prefWidth="1300.0" style="-fx-background-color: #5C6368;" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="46.0" stylesheets="@../style/style.css">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="100.0" spacing="10.0" styleClass="menubar">
+                                 <children>
+                                    <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="File">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Times New Roman" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Edit">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Times New Roman" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="view">
+                                       <font>
+                                          <Font name="Times New Roman" size="15.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: transparent;" text="Help">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Times New Roman" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="795.0" spacing="30.0" />
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                                 <children>
+                                    <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" onMouseClicked="#mini" size="25">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </MaterialDesignIconView>
+                                    <MaterialDesignIconView glyphName="VECTOR_ARRANGE_BELOW" onMouseClicked="#max" size="25">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </MaterialDesignIconView>
+                                    <MaterialDesignIconView glyphName="CLOSE_CIRCLE_OUTLINE" onMouseClicked="#close" size="25">
+                                       <HBox.margin>
+                                          <Insets right="-25.0" />
+                                       </HBox.margin>
+                                    </MaterialDesignIconView>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="58.0" prefWidth="1300.0" spacing="30.0">
+                           <children>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="97.0" prefWidth="239.0" spacing="10.0" styleClass="textFild" stylesheets="@../style/style.css">
+                                 <children>
+                                    <Label text="Year">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="cmbYear" prefWidth="195.0" style="-fx-background-color: non;" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="97.0" prefWidth="239.0" spacing="10.0" styleClass="textFild" stylesheets="@../style/style.css">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="52.0" text="Month">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="cmbMonth" prefWidth="195.0" style="-fx-background-color: non;" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="97.0" prefWidth="239.0" spacing="10.0" styleClass="textFild" stylesheets="@../style/style.css">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="28.0" text="Day">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="cmbDay" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: non;" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="97.0" prefWidth="239.0" spacing="10.0" styleClass="textFild" stylesheets="@../style/style.css">
+                                 <children>
+                                    <Label text="Film">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="cmbFilm" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: non;" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="212.0" spacing="3.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="55.0" prefWidth="1300.0" />
+                     </children>
+                  </VBox>
+               </top>
+               <right>
+                  <AnchorPane prefHeight="600.0" prefWidth="864.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tblDay" fixedCellSize="0.0" layoutY="-3.0" prefHeight="603.0" prefWidth="864.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <columns>
+                              <TableColumn fx:id="colYear" prefWidth="116.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Year" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colMonth" prefWidth="148.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Month" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colDay" prefWidth="62.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Day" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colFilmName" prefWidth="182.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Film Name" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colShowTime" minWidth="0.0" prefWidth="94.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Show Time" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colStartDate" prefWidth="121.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Start Date" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                              <TableColumn fx:id="colEndDate" prefWidth="112.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
+                                 <graphic>
+                                    <Label text="Ennd Date" textFill="#5c6368" />
+                                 </graphic>
+                              </TableColumn>
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </right>
+               <left>
+                  <AnchorPane prefHeight="1160.0" prefWidth="434.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="600.0" prefWidth="437.0" spacing="25.0" style="-fx-background-color: #242729;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="146.0" prefWidth="465.0">
+                                 <children>
+                                    <ImageView fitHeight="96.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/png/019-calendar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Year" textFill="WHITE" />
+                                    <TextField fx:id="txtYear" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Month" textFill="WHITE" />
+                                    <TextField fx:id="txtMonth" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Day" textFill="WHITE" />
+                                    <TextField fx:id="txtDay" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Film Name" textFill="WHITE" />
+                                    <TextField fx:id="txtFilmName" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Show Time" textFill="WHITE" />
+                                    <TextField fx:id="txtShowTime" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="Start Date" textFill="WHITE" />
+                                    <TextField fx:id="txtStartDate" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" prefHeight="35.0" prefWidth="531.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="100.0" text="End Date" textFill="WHITE" />
+                                    <TextField fx:id="txtEndDate" prefHeight="25.0" prefWidth="300.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton buttonType="RAISED" onMouseClicked="#saveDay" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+         </children>
+         <styleClass>
+            <String fx:value="top" />
+            <String fx:value="bottem" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

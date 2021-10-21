@@ -246,11 +246,11 @@ public class Reservation_Detail_Controller {
     }
 
     private boolean saveRes(reservstion_detail res) throws SQLException, ClassNotFoundException {
-        return new reservationController().saveRes(res);
+        return new Controller().saveRes(res);
     }
 
     private boolean saveReservationDetails(reservation r) throws SQLException, ClassNotFoundException {
-        return new reservationController().saveReservation(r);
+        return new Controller().saveReservation(r);
     }
 
     private void loadFilmNAme() throws SQLException, ClassNotFoundException {
@@ -259,7 +259,7 @@ public class Reservation_Detail_Controller {
     }
 
     private void setCustomerData(String nicNo) throws SQLException, ClassNotFoundException {
-        customer_Details c1 = new customerController().searchCustomer(nicNo);
+        customer_Details c1 = new Controller().searchCustomer(nicNo);
         if (c1==null){
             new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
         }else{
@@ -271,13 +271,13 @@ public class Reservation_Detail_Controller {
 
 
     private void loadnicNo() throws SQLException, ClassNotFoundException {
-        List<String> nicNo = new customerController().getNicNo();
+        List<String> nicNo = new Controller().getNicNo();
         cmbNicNo.getItems().addAll(nicNo);
     }
 
 
     private void setPackageData(String packageNo) throws SQLException, ClassNotFoundException {
-        Package p1 = new packageController().serchPackage(packageNo);
+        Package p1 = new Controller().serchPackage(packageNo);
         if (p1==null){
             new Alert(Alert.AlertType.WARNING,"No Package Data").show();
         }else{
@@ -288,7 +288,7 @@ public class Reservation_Detail_Controller {
     }
 
     private void loadPackageNo() throws SQLException, ClassNotFoundException {
-        List<String> packageNo = new packageController().getPackageNo();
+        List<String> packageNo = new Controller().getPackageNo();
         cmbPackageNo.getItems().addAll(packageNo);
 
     }

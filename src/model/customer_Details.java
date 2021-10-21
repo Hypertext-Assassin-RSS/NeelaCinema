@@ -1,7 +1,5 @@
 package model;
 
-import controller.customerController;
-
 public class customer_Details extends customerController {
     private String id;
     private String name;

@@ -56,8 +56,7 @@ public class Investor_Controller {
 
     private void loadAllInvestor() throws SQLException, ClassNotFoundException {
         ObservableList<InvestorTM> investorTMS = FXCollections.observableArrayList();
-        for (Investor tempInvestor:new Controller().getAllInvestor()
-        ){
+        for (Investor tempInvestor:new Controller().getAllInvestor()){
             investorTMS.add(new InvestorTM(
                     tempInvestor.getNicNo(),
                     tempInvestor.getName(),

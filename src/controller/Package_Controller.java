@@ -51,7 +51,7 @@ public class Package_Controller {
     }
 
     private void setPackageData(String packageNo) throws SQLException, ClassNotFoundException {
-        Package p1 = new packageController().serchPackage(packageNo);
+        Package p1 = new Controller().serchPackage(packageNo);
         if (p1==null){
             new Alert(Alert.AlertType.WARNING,"No Package Data").show();
         }else{
@@ -62,7 +62,7 @@ public class Package_Controller {
     }
 
     private void loadPackageNo() throws SQLException, ClassNotFoundException {
-        List<String> packageNo = new packageController().getPackageNo();
+        List<String> packageNo = new Controller().getPackageNo();
         cmb_packageNo.getItems().addAll(packageNo);
 
     }
@@ -90,7 +90,7 @@ public class Package_Controller {
     public void clearData(ActionEvent actionEvent) {
     }
     boolean savePackage(Package p) throws SQLException, ClassNotFoundException {
-        return new packageController().savePackage(p);
+        return new Controller().savePackage(p);
 
     }
 

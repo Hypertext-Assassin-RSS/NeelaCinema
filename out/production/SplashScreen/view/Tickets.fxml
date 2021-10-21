@@ -27,10 +27,10 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView layoutX="182.0" prefHeight="534.0" prefWidth="745.0" style="-fx-background-color: #FF0000;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tblTicket" layoutX="182.0" prefHeight="534.0" prefWidth="745.0" style="-fx-background-color: #FF0000;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn prefWidth="238.0" style="-fx-background-color: black;" />
-                            <TableColumn prefWidth="246.0" style="-fx-background-color: black;">
+                            <TableColumn fx:id="colPrice" prefWidth="238.0" style="-fx-background-color: black;" />
+                            <TableColumn fx:id="colFull" prefWidth="246.0" style="-fx-background-color: black;">
                                  <graphic>
                                     <Label text="Full" textFill="#5c6368">
                                        <font>
@@ -38,7 +38,7 @@
                                        </font>
                                     </Label>
                                  </graphic></TableColumn>
-                              <TableColumn prefWidth="242.0" style="-fx-background-color: black;">
+                              <TableColumn fx:id="colHalf" prefWidth="242.0" style="-fx-background-color: black;">
                                  <graphic>
                                     <Label text="Half" textFill="#5c6368">
                                        <font>

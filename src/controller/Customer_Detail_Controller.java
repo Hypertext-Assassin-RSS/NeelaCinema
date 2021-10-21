@@ -61,7 +61,7 @@ public class Customer_Detail_Controller {
     }
 
     private void setCustomerData(String nicNo) throws SQLException, ClassNotFoundException {
-        customer_Details c1 = new customerController().searchCustomer(nicNo);
+        customer_Details c1 = new Controller().searchCustomer(nicNo);
         if (c1==null){
             new Alert(Alert.AlertType.WARNING,"Empty Result Set").show();
         }else{
@@ -72,7 +72,7 @@ public class Customer_Detail_Controller {
     }
 
     private void loadnicNo() throws SQLException, ClassNotFoundException {
-        List<String> nicNo = new customerController().getNicNo();
+        List<String> nicNo = new Controller().getNicNo();
         cmbNicNo.getItems().addAll(nicNo);
     }
 
@@ -111,15 +111,18 @@ public class Customer_Detail_Controller {
                 txtName.getText(),
                 txtContact.getText()
         );
-        if (save_Customer_Detalis(cd))
-            new Alert(Alert.AlertType.CONFIRMATION,"Saved...").show();
-        else
-            new Alert(Alert.AlertType.WARNING,"Try Again...").show();
+        if (save_Customer_Detalis(cd)) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Saved...").show();
+            tblCustomer.refresh();
+        }else {
+            new Alert(Alert.AlertType.WARNING, "Try Again...").show();
+        }
 
     }
 
     private boolean save_Customer_Detalis(customer_Details c1) throws SQLException, ClassNotFoundException {
-        return new customerController().save_Customer_Details(c1);
+        return new Controller().save_Customer_Details(c1);
+
     }
 
 }
