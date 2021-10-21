@@ -3,6 +3,7 @@ package controller;
 import db.DbConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -10,10 +11,7 @@ import javafx.scene.input.MouseEvent;
 import model.customer_Details;
 import view.TM.Customer_Detail_TM;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,6 +57,29 @@ public class Customer_Detail_Controller {
             }
         });
     }
+
+    public void deleteCustomerOnAction(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
+
+        Statement stm = DbConnection.getInstance().getConnection().createStatement();
+        String query = "DELETE FROM customer_detail WHERE cusNicNo='" + txtId.getText() + "'";
+
+        if (delete(txtId.getText())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Are You Sure You Want To Delete This Customer").show();
+        } else {
+            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+        }
+
+    }
+    boolean delete(String id) throws SQLException, ClassNotFoundException {
+        if (DbConnection.getInstance().getConnection().prepareStatement("DELETE FROM customer_detail WHERE cusNicNo='" + id + "'").executeUpdate() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
 
     private void setCustomerData(String nicNo) throws SQLException, ClassNotFoundException {
         customer_Details c1 = new Controller().searchCustomer(nicNo);

@@ -150,7 +150,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView fx:id="tblCustomer" prefHeight="534.0" prefWidth="517.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tblCustomer" prefHeight="473.0" prefWidth="507.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
                             <TableColumn fx:id="colNic" prefWidth="137.0" style="-fx-background-color: #242729; -fx-text-fill: white;">
                                  <graphic>
@@ -166,6 +166,11 @@
                                  </graphic></TableColumn>
                           </columns>
                         </TableView>
+                        <JFXButton buttonType="RAISED" layoutX="336.0" layoutY="484.0" onAction="#deleteCustomerOnAction" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #5C6368;" text="Delete" textFill="#242729">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </AnchorPane>
                </center>
