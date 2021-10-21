@@ -293,7 +293,7 @@
                <right>
                   <AnchorPane prefHeight="355.0" prefWidth="561.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView fx:id="tblReservation" layoutY="4.0" prefHeight="427.0" prefWidth="561.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="tblReservation" layoutY="4.0" onMouseClicked="#openReservationWindow" prefHeight="427.0" prefWidth="561.0" style="-fx-background-color: #5C6368;" styleClass="RightBottemBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <columns>
                               <TableColumn fx:id="colNic" prefWidth="134.0" style="-fx-text-fill: white; -fx-background-color: #242729;">
                                  <graphic>

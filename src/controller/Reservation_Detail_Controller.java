@@ -7,9 +7,13 @@ import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import model.Package;
 import model.customer_Details;
@@ -17,6 +21,7 @@ import model.reservation;
 import model.reservstion_detail;
 import view.TM.ReservationTM;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -93,6 +98,8 @@ public class Reservation_Detail_Controller {
     private Label lblTime;
 
 
+
+
     private void loadDateAndTime() {
 
         SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd");
@@ -116,7 +123,8 @@ public class Reservation_Detail_Controller {
 
     private static ArrayList<String> QTY = new ArrayList<>();
 
-    public void initialize(){
+    public void initialize() throws SQLException, ClassNotFoundException {
+
         try {
             colNic.setCellValueFactory(new PropertyValueFactory<>("cusNicNo"));
             colFilmName.setCellValueFactory(new PropertyValueFactory<>("filmName"));
@@ -220,6 +228,7 @@ public class Reservation_Detail_Controller {
 
     @FXML
     void saveReservation(MouseEvent event) throws SQLException, ClassNotFoundException {
+
     reservation r1 = new reservation(
             txtNicNo.getText(),
             txtCusName.getText(),
@@ -233,6 +242,7 @@ public class Reservation_Detail_Controller {
             txtReservationNo.getText()
     );
     if (saveReservationDetails(r1)) {
+
         new Alert(Alert.AlertType.CONFIRMATION, "Saved..").show();
     }else {
         new Alert(Alert.AlertType.WARNING, "Try Again..").show();
@@ -288,6 +298,13 @@ public class Reservation_Detail_Controller {
     }
 
 
+    public void openReservationWindow(MouseEvent mouseEvent) throws IOException {
+        Parent load = FXMLLoader.load(getClass().getResource("../view/reservation_customer.fxml"));
+        Scene scene = new Scene(load);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
 }
 
 

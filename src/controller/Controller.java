@@ -3,6 +3,7 @@ package controller;
 import db.DbConnection;
 import model.*;
 import model.Package;
+import view.TM.FullReservatonTM;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,9 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Controller {
-
-
-
     public List<String> getPackageNo() throws SQLException, ClassNotFoundException {
         ResultSet rst = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Package").executeQuery();
         List<String> packageNo = new ArrayList<>();
@@ -34,7 +32,6 @@ public class Controller {
 
     public boolean saveReservation(reservation r) throws SQLException, ClassNotFoundException {
         Connection connection = DbConnection.getInstance().getConnection();
-
         String query = "INSERT INTO ReservationDetails VALUES  (?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(query);
 
@@ -226,9 +223,9 @@ public class Controller {
         while(resultSet.next()) {
             reservations.add(new reservation(
                     resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    Integer.parseInt(resultSet.getString(4))
+                    resultSet.getString(4),
+                    resultSet.getString(6),
+                    resultSet.getInt(5)
             ));
         }
         return reservations;
@@ -245,6 +242,24 @@ public class Controller {
             ));
         }
         return customer_details;
+
+    }
+    public ArrayList<FullReservation> getAllFullReservations() throws SQLException, ClassNotFoundException {
+        ArrayList<FullReservation> reservations = new ArrayList<>();
+        ResultSet resultSet = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM reservation r,customer_detail c where r.customer_id=c.cusNicNo").executeQuery();
+
+        while(resultSet.next()){
+            reservations.add(new FullReservation(
+               resultSet.getString(1),
+               resultSet.getString(2),
+               resultSet.getString(3),
+               resultSet.getString(4),
+               resultSet.getString(5),
+               resultSet.getString(6)
+            ));
+        }
+        return  reservations;
+
 
     }
 
@@ -297,6 +312,7 @@ public class Controller {
 
             return stm.executeUpdate() > 0;
         }
+
 
 }
 

@@ -24,8 +24,6 @@ public class DbConnection {
             dbConnection= new DbConnection();
         }
         return dbConnection;
-
-
     }
 
     public Connection getConnection(){
