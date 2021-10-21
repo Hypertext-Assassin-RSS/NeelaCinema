@@ -1,5 +1,6 @@
 package controller;
 
+import db.DbConnection;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -55,24 +56,14 @@ public class Login_Controller {
         e.setIconified(true);
     }
 
-    public void open_Settings(MouseEvent mouseEvent) throws IOException {
-
+    public void open_Settings(MouseEvent mouseEvent) throws IOException, SQLException, ClassNotFoundException {
         String password = txtPassword.getText();
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/neela",
-                    "root",
-                    "1234");
-            Statement stm = con.createStatement();
-            String query = "SELECT * FROM Employ WHERE password='" + password + "'";
+        ResultSet resultSet = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM Employ WHERE password='" + password + "'").executeQuery();
 
-            ResultSet set = stm.executeQuery(query);
+            if (resultSet.next()) {
 
-            if (set.next()) {
-
-                String tempUser = set.getString(4);
-                String tempPassword = set.getString(5);
+                String tempUser = resultSet.getString(4);
+                String tempPassword = resultSet.getString(5);
 
                 txtUser.setText(tempUser);
                 txtPassword.setText(tempPassword);
@@ -88,10 +79,8 @@ public class Login_Controller {
             }
 
 
-        } catch (SQLException | IOException | ClassNotFoundException throwables) {
-            throwables.printStackTrace();
-
-
         }
-    }
+
+
 }
+

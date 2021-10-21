@@ -1,6 +1,6 @@
 package model;
 
-public class customer_Details extends customerController {
+public class customer_Details {
     private String id;
     private String name;
     private String contact;
