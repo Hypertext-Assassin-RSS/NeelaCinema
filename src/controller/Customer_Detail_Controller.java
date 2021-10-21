@@ -77,20 +77,17 @@ public class Customer_Detail_Controller {
     }
 
     private void loadAllCustomers() throws SQLException, ClassNotFoundException {
-        Connection con = DbConnection.getInstance().getConnection();
-        Statement stm = con.createStatement();
-        String query = "SELECT * FROM Customer_Detail";
-        ResultSet rst = stm.executeQuery(query);
-
-        ArrayList<customer_Details> customer_details = new ArrayList<>();
-        while (rst.next()) {
-            customer_details.add(new customer_Details(
-                    rst.getString(1),
-                    rst.getString(2),
-                    rst.getString(3)
+        ObservableList<Customer_Detail_TM> observableList = FXCollections.observableArrayList();
+        for (customer_Details tempCustomer:new Controller().getAllCustomerDetails()
+             ) {
+            observableList.add(new Customer_Detail_TM(
+                    tempCustomer.getId(),
+                    tempCustomer.getName(),
+                    tempCustomer.getContact()
             ));
+
         }
-        setCustomerToTabel(customer_details);
+        tblCustomer.setItems(observableList);
     }
 
     private void setCustomerToTabel(ArrayList<customer_Details> customer_details) {

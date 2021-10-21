@@ -171,23 +171,19 @@ public class Reservation_Detail_Controller {
         }
 
     private void loadAllReservations() throws SQLException, ClassNotFoundException {
-        Connection connection = DbConnection.getInstance().getConnection();
-        Statement statement = connection.createStatement();
-        String query = "SELECT * FROM ReservationDetails";
-        ResultSet resultSet = statement.executeQuery(query);
+        ObservableList<ReservationTM> observableList = FXCollections.observableArrayList();
+        for (reservation tempReservation :new Controller().getAllReservations()
+             ) {
+            observableList.add(new ReservationTM(
+                    tempReservation.getCusNicNo(),
+                    tempReservation.getFilmName(),
+                    tempReservation.getPackageNo(),
+                    tempReservation.getTicketQTY()
 
-        ArrayList<reservation> reservations = new ArrayList<>();
-
-        while(resultSet.next()){
-            reservations.add(new reservation(
-                    resultSet.getString(1),
-                    resultSet.getString(4),
-                    resultSet.getString(6),
-                    Integer.parseInt(resultSet.getString(5))
             ));
-        }
-        setReservationToTable(reservations);
 
+        }
+        tblReservation.setItems(observableList);
     }
 
     private void setReservationToTable(ArrayList<reservation> reservations) {
@@ -224,8 +220,6 @@ public class Reservation_Detail_Controller {
 
     @FXML
     void saveReservation(MouseEvent event) throws SQLException, ClassNotFoundException {
-
-
     reservation r1 = new reservation(
             txtNicNo.getText(),
             txtCusName.getText(),

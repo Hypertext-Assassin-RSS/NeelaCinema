@@ -18,6 +18,7 @@ public class ReservationTM {
         this.setTicketQTY(ticketQTY);
     }
 
+
     public String getCusNicNo() {
         return cusNicNo;
     }

@@ -217,6 +217,34 @@ public class Controller {
             }
             return studios;
         }
+    public ArrayList<reservation> getAllReservations() throws SQLException, ClassNotFoundException {
+        ArrayList<reservation> reservations = new ArrayList<>();
+        ResultSet resultSet = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM reservationdetails").executeQuery();
+
+        while(resultSet.next()) {
+            reservations.add(new reservation(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    Integer.parseInt(resultSet.getString(4))
+            ));
+        }
+        return reservations;
+    }
+    public ArrayList<customer_Details> getAllCustomerDetails() throws SQLException, ClassNotFoundException {
+        ArrayList<customer_Details> customer_details = new ArrayList<>();
+        ResultSet resultSet = DbConnection.getInstance().getConnection().prepareStatement("SELECT * FROM customer_detail").executeQuery();
+
+        while (resultSet.next()) {
+            customer_details.add(new customer_Details(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3)
+            ));
+        }
+        return customer_details;
+
+    }
 
         public boolean save_Employ (Employ em) throws SQLException, ClassNotFoundException {
             Connection con = DbConnection.getInstance().getConnection();
@@ -267,5 +295,6 @@ public class Controller {
 
             return stm.executeUpdate() > 0;
         }
-    }
+
+}
 
