@@ -15,6 +15,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javafx.scene.control.Alert.AlertType.CONFIRMATION;
+
 public class Customer_Detail_Controller {
     public TableView tblCustomer;
     public TableColumn colNic;
@@ -59,15 +61,20 @@ public class Customer_Detail_Controller {
     }
 
     public void deleteCustomerOnAction(ActionEvent actionEvent) throws ClassNotFoundException, SQLException {
+        DbConnection.getInstance().getConnection().setAutoCommit(false);
 
         Statement stm = DbConnection.getInstance().getConnection().createStatement();
         String query = "DELETE FROM customer_detail WHERE cusNicNo='" + txtId.getText() + "'";
 
         if (delete(txtId.getText())) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Are You Sure You Want To Delete This Customer").show();
+            new Alert(Alert.AlertType.WARNING, "Customer Deleted...").show();
+            DbConnection.getInstance().getConnection().commit();
         } else {
-            new Alert(Alert.AlertType.WARNING, "Try Again").show();
+            new Alert(Alert.AlertType.WARNING, "Try Again...").show();
+            DbConnection.getInstance().getConnection().rollback();
         }
+        tblCustomer.getItems().remove(tblCustomer.getSelectionModel().getSelectedItem());
+        tblCustomer.getSelectionModel().clearSelection();
 
     }
     boolean delete(String id) throws SQLException, ClassNotFoundException {
@@ -130,7 +137,7 @@ public class Customer_Detail_Controller {
                 txtContact.getText()
         );
         if (save_Customer_Detalis(cd)) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Saved...").show();
+            new Alert(CONFIRMATION, "Saved...").show();
             tblCustomer.refresh();
         }else {
             new Alert(Alert.AlertType.WARNING, "Try Again...").show();
